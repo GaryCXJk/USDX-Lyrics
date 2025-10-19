@@ -1,0 +1,29 @@
+[gd_scene load_steps=2 format=3 uid="uid://ew1788kcav36"]
+
+[ext_resource type="Script" uid="uid://dh3t7idd70nrc" path="res://scenes/examples.gd" id="1_3iw6t"]
+
+[node name="Examples" type="Node2D"]
+script = ExtResource("1_3iw6t")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 15
+theme_override_constants/margin_right = 15
+theme_override_constants/margin_bottom = 15
+
+[node name="BoxContainer" type="HFlowContainer" parent="CanvasLayer/MarginContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="SimpleButton" type="Button" parent="CanvasLayer/MarginContainer/BoxContainer"]
+layout_mode = 2
+text = "Simple"
+
+[connection signal="pressed" from="CanvasLayer/MarginContainer/BoxContainer/SimpleButton" to="." method="_on_button_pressed" binds= ["simple"]]

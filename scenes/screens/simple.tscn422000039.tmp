@@ -1,0 +1,3489 @@
+[gd_scene load_steps=422 format=3 uid="uid://ceqav0f7dbk6d"]
+
+[ext_resource type="Script" uid="uid://7tlfj4181h3q" path="res://scenes/screens/simple/lyric_player.gd" id="1_3g1vi"]
+[ext_resource type="Script" uid="uid://pgj5syv3e8mi" path="res://addons/usdx_lyrics/core/song.gd" id="2_1ppoa"]
+[ext_resource type="AudioStream" uid="uid://dbr56x65pxmpv" path="res://assets/GaryCXJk - YummyPoetry/GaryCXJk - YummyPoetry.mp3" id="2_nqhq8"]
+[ext_resource type="Script" uid="uid://c28805ipbwfo1" path="res://scenes/screens/simple/seeker.gd" id="3_3g1vi"]
+[ext_resource type="Script" uid="uid://csmndspe4hc44" path="res://addons/usdx_lyrics/core/singer.gd" id="3_4h1ab"]
+[ext_resource type="Script" uid="uid://j5ig3tfxkrn4" path="res://addons/usdx_lyrics/core/phrase.gd" id="4_ahm73"]
+[ext_resource type="FontFile" uid="uid://ca6op6o30i7c0" path="res://assets/fonts/OpenSans-ExtraBold.ttf" id="4_vecmj"]
+[ext_resource type="Script" uid="uid://ctf58rjrgrepb" path="res://addons/usdx_lyrics/nodes/lyric_line.gd" id="5_4fona"]
+[ext_resource type="Script" uid="uid://c0k8ef6k6qtdo" path="res://addons/usdx_lyrics/core/note.gd" id="5_8xlja"]
+
+[sub_resource type="Resource" id="Resource_1hs4p"]
+script = ExtResource("5_8xlja")
+type = 3
+length = 2
+pitch = 2
+text = "Yum"
+
+[sub_resource type="Resource" id="Resource_4ecde"]
+script = ExtResource("5_8xlja")
+type = 3
+start_beat = 3
+length = 2
+pitch = 2
+text = "my"
+
+[sub_resource type="Resource" id="Resource_u3hvq"]
+script = ExtResource("5_8xlja")
+type = 3
+start_beat = 8
+length = 3
+pitch = 2
+text = " Cakes!"
+
+[sub_resource type="Resource" id="Resource_kxutr"]
+script = ExtResource("5_8xlja")
+type = 3
+start_beat = 16
+length = 3
+pitch = 2
+text = " Yum"
+
+[sub_resource type="Resource" id="Resource_5v7np"]
+script = ExtResource("5_8xlja")
+type = 3
+start_beat = 20
+length = 2
+pitch = 2
+text = "my"
+
+[sub_resource type="Resource" id="Resource_cd54j"]
+script = ExtResource("5_8xlja")
+type = 3
+start_beat = 24
+length = 3
+pitch = 2
+text = " Cakes!"
+
+[sub_resource type="Resource" id="Resource_241oj"]
+script = ExtResource("4_ahm73")
+notes = Array[ExtResource("5_8xlja")]([SubResource("Resource_1hs4p"), SubResource("Resource_4ecde"), SubResource("Resource_u3hvq"), SubResource("Resource_kxutr"), SubResource("Resource_5v7np"), SubResource("Resource_cd54j")])
+end_beat = 29
+
+[sub_resource type="Resource" id="Resource_c3816"]
+script = ExtResource("5_8xlja")
+type = 3
+start_beat = 32
+length = 2
+pitch = 2
+text = "Eat"
+
+[sub_resource type="Resource" id="Resource_bs2uo"]
+script = ExtResource("5_8xlja")
+type = 3
+start_beat = 35
+length = 2
+pitch = 2
+text = " it"
+
+[sub_resource type="Resource" id="Resource_runug"]
+script = ExtResource("5_8xlja")
+type = 3
+start_beat = 40
+length = 3
+pitch = 2
+text = " like"
+
+[sub_resource type="Resource" id="Resource_o7hba"]
+script = ExtResource("5_8xlja")
+type = 3
+start_beat = 44
+length = 2
+pitch = 2
+text = " your"
+
+[sub_resource type="Resource" id="Resource_jlcom"]
+script = ExtResource("5_8xlja")
+type = 3
+start_beat = 47
+length = 3
+pitch = 2
+text = " life's"
+
+[sub_resource type="Resource" id="Resource_jbspj"]
+script = ExtResource("5_8xlja")
+type = 3
+start_beat = 52
+length = 1
+pitch = 2
+text = " at"
+
+[sub_resource type="Resource" id="Resource_tuppv"]
+script = ExtResource("5_8xlja")
+type = 3
+start_beat = 56
+length = 3
+pitch = 2
+text = " stake"
+
+[sub_resource type="Resource" id="Resource_c1f7e"]
+script = ExtResource("4_ahm73")
+notes = Array[ExtResource("5_8xlja")]([SubResource("Resource_c3816"), SubResource("Resource_bs2uo"), SubResource("Resource_runug"), SubResource("Resource_o7hba"), SubResource("Resource_jlcom"), SubResource("Resource_jbspj"), SubResource("Resource_tuppv")])
+start_beat = 29
+end_beat = 62
+
+[sub_resource type="Resource" id="Resource_onr8g"]
+script = ExtResource("5_8xlja")
+type = 3
+start_beat = 64
+length = 2
+pitch = 2
+text = "Just"
+
+[sub_resource type="Resource" id="Resource_rwk7g"]
+script = ExtResource("5_8xlja")
+type = 3
+start_beat = 69
+length = 2
+pitch = 2
+text = " eat"
+
+[sub_resource type="Resource" id="Resource_mcqtp"]
+script = ExtResource("5_8xlja")
+type = 3
+start_beat = 72
+length = 2
+pitch = 2
+text = " it"
+
+[sub_resource type="Resource" id="Resource_j2btm"]
+script = ExtResource("5_8xlja")
+type = 3
+start_beat = 77
+length = 2
+pitch = 2
+text = " through"
+
+[sub_resource type="Resource" id="Resource_cwdl8"]
+script = ExtResource("5_8xlja")
+type = 3
+start_beat = 80
+length = 3
+pitch = 2
+text = " your"
+
+[sub_resource type="Resource" id="Resource_pxka4"]
+script = ExtResource("5_8xlja")
+type = 3
+start_beat = 84
+length = 2
+pitch = 2
+text = " lunch"
+
+[sub_resource type="Resource" id="Resource_yqnqc"]
+script = ExtResource("5_8xlja")
+type = 3
+start_beat = 88
+length = 3
+pitch = 2
+text = " break"
+
+[sub_resource type="Resource" id="Resource_7lsgr"]
+script = ExtResource("4_ahm73")
+notes = Array[ExtResource("5_8xlja")]([SubResource("Resource_onr8g"), SubResource("Resource_rwk7g"), SubResource("Resource_mcqtp"), SubResource("Resource_j2btm"), SubResource("Resource_cwdl8"), SubResource("Resource_pxka4"), SubResource("Resource_yqnqc")])
+start_beat = 62
+end_beat = 94
+
+[sub_resource type="Resource" id="Resource_i451a"]
+script = ExtResource("5_8xlja")
+type = 3
+start_beat = 96
+length = 2
+pitch = 2
+text = "It"
+
+[sub_resource type="Resource" id="Resource_yhq6h"]
+script = ExtResource("5_8xlja")
+type = 3
+start_beat = 99
+length = 2
+pitch = 2
+text = " is"
+
+[sub_resource type="Resource" id="Resource_ow7b1"]
+script = ExtResource("5_8xlja")
+type = 3
+start_beat = 103
+length = 3
+pitch = 2
+text = " yum"
+
+[sub_resource type="Resource" id="Resource_l61qn"]
+script = ExtResource("5_8xlja")
+type = 3
+start_beat = 107
+length = 3
+pitch = 2
+text = "my"
+
+[sub_resource type="Resource" id="Resource_vt3nt"]
+script = ExtResource("5_8xlja")
+type = 3
+start_beat = 112
+length = 1
+pitch = 2
+text = " it's"
+
+[sub_resource type="Resource" id="Resource_lgjsf"]
+script = ExtResource("5_8xlja")
+type = 3
+start_beat = 116
+length = 2
+pitch = 2
+text = " not"
+
+[sub_resource type="Resource" id="Resource_afipg"]
+script = ExtResource("5_8xlja")
+type = 3
+start_beat = 120
+length = 3
+pitch = 2
+text = " fake"
+
+[sub_resource type="Resource" id="Resource_if500"]
+script = ExtResource("4_ahm73")
+notes = Array[ExtResource("5_8xlja")]([SubResource("Resource_i451a"), SubResource("Resource_yhq6h"), SubResource("Resource_ow7b1"), SubResource("Resource_l61qn"), SubResource("Resource_vt3nt"), SubResource("Resource_lgjsf"), SubResource("Resource_afipg")])
+start_beat = 94
+end_beat = 126
+
+[sub_resource type="Resource" id="Resource_cm7hb"]
+script = ExtResource("5_8xlja")
+type = 3
+start_beat = 128
+length = 2
+pitch = 2
+text = "Yum"
+
+[sub_resource type="Resource" id="Resource_ov4xr"]
+script = ExtResource("5_8xlja")
+type = 3
+start_beat = 131
+length = 2
+pitch = 2
+text = "my"
+
+[sub_resource type="Resource" id="Resource_qf7ya"]
+script = ExtResource("5_8xlja")
+type = 3
+start_beat = 136
+length = 3
+pitch = 2
+text = " Cakes"
+
+[sub_resource type="Resource" id="Resource_51g15"]
+script = ExtResource("5_8xlja")
+type = 3
+start_beat = 144
+length = 2
+pitch = 2
+text = " taste"
+
+[sub_resource type="Resource" id="Resource_lor14"]
+script = ExtResource("5_8xlja")
+type = 3
+start_beat = 148
+length = 3
+pitch = 2
+text = " so"
+
+[sub_resource type="Resource" id="Resource_43b01"]
+script = ExtResource("5_8xlja")
+type = 3
+start_beat = 153
+length = 3
+pitch = 2
+text = " good"
+
+[sub_resource type="Resource" id="Resource_ynvhh"]
+script = ExtResource("4_ahm73")
+notes = Array[ExtResource("5_8xlja")]([SubResource("Resource_cm7hb"), SubResource("Resource_ov4xr"), SubResource("Resource_qf7ya"), SubResource("Resource_51g15"), SubResource("Resource_lor14"), SubResource("Resource_43b01")])
+start_beat = 126
+end_beat = 158
+
+[sub_resource type="Resource" id="Resource_62qc3"]
+script = ExtResource("5_8xlja")
+type = 3
+start_beat = 160
+length = 3
+pitch = 2
+text = "Please"
+
+[sub_resource type="Resource" id="Resource_cpfkr"]
+script = ExtResource("5_8xlja")
+type = 3
+start_beat = 164
+length = 3
+pitch = 2
+text = " don't"
+
+[sub_resource type="Resource" id="Resource_7rn8a"]
+script = ExtResource("5_8xlja")
+type = 3
+start_beat = 168
+length = 2
+pitch = 2
+text = " ask"
+
+[sub_resource type="Resource" id="Resource_l0jht"]
+script = ExtResource("5_8xlja")
+type = 3
+start_beat = 172
+length = 3
+pitch = 2
+text = " me"
+
+[sub_resource type="Resource" id="Resource_vu5tq"]
+script = ExtResource("5_8xlja")
+type = 3
+start_beat = 176
+length = 3
+pitch = 2
+text = " why"
+
+[sub_resource type="Resource" id="Resource_yj0gp"]
+script = ExtResource("5_8xlja")
+type = 3
+start_beat = 180
+length = 2
+pitch = 2
+text = " you"
+
+[sub_resource type="Resource" id="Resource_r5f8x"]
+script = ExtResource("5_8xlja")
+type = 3
+start_beat = 185
+length = 3
+pitch = 2
+text = " should"
+
+[sub_resource type="Resource" id="Resource_vd4rg"]
+script = ExtResource("4_ahm73")
+notes = Array[ExtResource("5_8xlja")]([SubResource("Resource_62qc3"), SubResource("Resource_cpfkr"), SubResource("Resource_7rn8a"), SubResource("Resource_l0jht"), SubResource("Resource_vu5tq"), SubResource("Resource_yj0gp"), SubResource("Resource_r5f8x")])
+start_beat = 158
+end_beat = 189
+
+[sub_resource type="Resource" id="Resource_vc4v8"]
+script = ExtResource("5_8xlja")
+type = 3
+start_beat = 191
+length = 3
+pitch = 2
+text = "Eat"
+
+[sub_resource type="Resource" id="Resource_b7j4q"]
+script = ExtResource("5_8xlja")
+type = 3
+start_beat = 195
+length = 2
+pitch = 2
+text = " it"
+
+[sub_resource type="Resource" id="Resource_yac3t"]
+script = ExtResource("5_8xlja")
+type = 3
+start_beat = 199
+length = 3
+pitch = 2
+text = " like"
+
+[sub_resource type="Resource" id="Resource_ca43v"]
+script = ExtResource("5_8xlja")
+type = 3
+start_beat = 204
+length = 2
+pitch = 2
+text = " your"
+
+[sub_resource type="Resource" id="Resource_wplp8"]
+script = ExtResource("5_8xlja")
+type = 3
+start_beat = 208
+length = 2
+pitch = 2
+text = " dai"
+
+[sub_resource type="Resource" id="Resource_ijrfs"]
+script = ExtResource("5_8xlja")
+type = 3
+start_beat = 212
+length = 1
+pitch = 2
+text = "ly"
+
+[sub_resource type="Resource" id="Resource_vnhmt"]
+script = ExtResource("5_8xlja")
+type = 3
+start_beat = 217
+length = 4
+pitch = 2
+text = " food"
+
+[sub_resource type="Resource" id="Resource_8swg6"]
+script = ExtResource("4_ahm73")
+notes = Array[ExtResource("5_8xlja")]([SubResource("Resource_vc4v8"), SubResource("Resource_b7j4q"), SubResource("Resource_yac3t"), SubResource("Resource_ca43v"), SubResource("Resource_wplp8"), SubResource("Resource_ijrfs"), SubResource("Resource_vnhmt")])
+start_beat = 189
+end_beat = 222
+
+[sub_resource type="Resource" id="Resource_mvy0b"]
+script = ExtResource("5_8xlja")
+type = 3
+start_beat = 224
+length = 2
+pitch = 2
+text = "Yum"
+
+[sub_resource type="Resource" id="Resource_02ktx"]
+script = ExtResource("5_8xlja")
+type = 3
+start_beat = 227
+length = 2
+pitch = 2
+text = "my"
+
+[sub_resource type="Resource" id="Resource_pv6y1"]
+script = ExtResource("5_8xlja")
+type = 3
+start_beat = 232
+length = 3
+pitch = 2
+text = " Cakes,"
+
+[sub_resource type="Resource" id="Resource_d7e0i"]
+script = ExtResource("5_8xlja")
+type = 3
+start_beat = 240
+length = 3
+pitch = 2
+text = " eat"
+
+[sub_resource type="Resource" id="Resource_tmstt"]
+script = ExtResource("5_8xlja")
+type = 3
+start_beat = 244
+length = 2
+pitch = 2
+text = " it"
+
+[sub_resource type="Resource" id="Resource_5f24x"]
+script = ExtResource("5_8xlja")
+type = 3
+start_beat = 248
+length = 7
+pitch = 2
+text = " dude!"
+
+[sub_resource type="Resource" id="Resource_jexhi"]
+script = ExtResource("4_ahm73")
+notes = Array[ExtResource("5_8xlja")]([SubResource("Resource_mvy0b"), SubResource("Resource_02ktx"), SubResource("Resource_pv6y1"), SubResource("Resource_d7e0i"), SubResource("Resource_tmstt"), SubResource("Resource_5f24x")])
+start_beat = 222
+end_beat = 255
+
+[sub_resource type="Resource" id="Resource_x31g3"]
+script = ExtResource("5_8xlja")
+type = 1
+start_beat = 256
+length = 7
+pitch = 14
+text = "Yum"
+
+[sub_resource type="Resource" id="Resource_or0tn"]
+script = ExtResource("5_8xlja")
+type = 1
+start_beat = 264
+length = 3
+pitch = 13
+text = "my"
+
+[sub_resource type="Resource" id="Resource_iikpk"]
+script = ExtResource("5_8xlja")
+type = 1
+start_beat = 268
+length = 3
+pitch = 11
+text = "~"
+
+[sub_resource type="Resource" id="Resource_dtwmb"]
+script = ExtResource("5_8xlja")
+type = 1
+start_beat = 272
+length = 4
+pitch = 13
+text = " Cakes!"
+
+[sub_resource type="Resource" id="Resource_obhxy"]
+script = ExtResource("5_8xlja")
+type = 1
+start_beat = 277
+length = 4
+pitch = 14
+text = "~  "
+
+[sub_resource type="Resource" id="Resource_dmud1"]
+script = ExtResource("4_ahm73")
+notes = Array[ExtResource("5_8xlja")]([SubResource("Resource_x31g3"), SubResource("Resource_or0tn"), SubResource("Resource_iikpk"), SubResource("Resource_dtwmb"), SubResource("Resource_obhxy")])
+start_beat = 255
+end_beat = 285
+
+[sub_resource type="Resource" id="Resource_b3a24"]
+script = ExtResource("5_8xlja")
+start_beat = 288
+length = 2
+pitch = 4
+text = "Makes"
+
+[sub_resource type="Resource" id="Resource_ka7lu"]
+script = ExtResource("5_8xlja")
+start_beat = 293
+length = 1
+pitch = 4
+text = " you"
+
+[sub_resource type="Resource" id="Resource_ggr8f"]
+script = ExtResource("5_8xlja")
+start_beat = 296
+length = 2
+pitch = 4
+text = " feel"
+
+[sub_resource type="Resource" id="Resource_luath"]
+script = ExtResource("5_8xlja")
+start_beat = 299
+length = 2
+pitch = 6
+text = " like"
+
+[sub_resource type="Resource" id="Resource_y8a4a"]
+script = ExtResource("5_8xlja")
+start_beat = 304
+length = 1
+pitch = 2
+text = " po"
+
+[sub_resource type="Resource" id="Resource_2phgw"]
+script = ExtResource("5_8xlja")
+start_beat = 306
+length = 1
+pitch = -1
+text = "e"
+
+[sub_resource type="Resource" id="Resource_ojhw5"]
+script = ExtResource("5_8xlja")
+start_beat = 310
+length = 3
+pitch = -1
+text = "try"
+
+[sub_resource type="Resource" id="Resource_5ouax"]
+script = ExtResource("4_ahm73")
+notes = Array[ExtResource("5_8xlja")]([SubResource("Resource_b3a24"), SubResource("Resource_ka7lu"), SubResource("Resource_ggr8f"), SubResource("Resource_luath"), SubResource("Resource_y8a4a"), SubResource("Resource_2phgw"), SubResource("Resource_ojhw5")])
+start_beat = 285
+end_beat = 318
+
+[sub_resource type="Resource" id="Resource_te27l"]
+script = ExtResource("5_8xlja")
+start_beat = 320
+length = 7
+pitch = 13
+text = "Yum"
+
+[sub_resource type="Resource" id="Resource_wob1c"]
+script = ExtResource("5_8xlja")
+start_beat = 328
+length = 3
+pitch = 11
+text = "my"
+
+[sub_resource type="Resource" id="Resource_lyaas"]
+script = ExtResource("5_8xlja")
+start_beat = 332
+length = 3
+pitch = 9
+text = "~"
+
+[sub_resource type="Resource" id="Resource_f7qjr"]
+script = ExtResource("5_8xlja")
+start_beat = 336
+length = 4
+pitch = 11
+text = " Cakes!"
+
+[sub_resource type="Resource" id="Resource_16sxh"]
+script = ExtResource("5_8xlja")
+start_beat = 341
+length = 4
+pitch = 13
+text = "~"
+
+[sub_resource type="Resource" id="Resource_pa8qu"]
+script = ExtResource("4_ahm73")
+notes = Array[ExtResource("5_8xlja")]([SubResource("Resource_te27l"), SubResource("Resource_wob1c"), SubResource("Resource_lyaas"), SubResource("Resource_f7qjr"), SubResource("Resource_16sxh")])
+start_beat = 318
+end_beat = 350
+
+[sub_resource type="Resource" id="Resource_h4mn0"]
+script = ExtResource("5_8xlja")
+start_beat = 352
+length = 3
+pitch = 11
+text = "Come"
+
+[sub_resource type="Resource" id="Resource_vo150"]
+script = ExtResource("5_8xlja")
+start_beat = 356
+length = 2
+pitch = 6
+text = " on"
+
+[sub_resource type="Resource" id="Resource_t4fu7"]
+script = ExtResource("5_8xlja")
+start_beat = 360
+length = 3
+pitch = 4
+text = " peo"
+
+[sub_resource type="Resource" id="Resource_33qfm"]
+script = ExtResource("5_8xlja")
+start_beat = 364
+length = 3
+pitch = 2
+text = "ple"
+
+[sub_resource type="Resource" id="Resource_lwtg0"]
+script = ExtResource("5_8xlja")
+start_beat = 368
+length = 3
+pitch = 4
+text = " dance"
+
+[sub_resource type="Resource" id="Resource_jqw61"]
+script = ExtResource("5_8xlja")
+start_beat = 372
+length = 3
+pitch = 2
+text = " with"
+
+[sub_resource type="Resource" id="Resource_rqi8y"]
+script = ExtResource("5_8xlja")
+start_beat = 376
+length = 1
+pitch = 6
+text = " me"
+
+[sub_resource type="Resource" id="Resource_k4mhm"]
+script = ExtResource("5_8xlja")
+start_beat = 378
+length = 1
+pitch = 4
+text = "~"
+
+[sub_resource type="Resource" id="Resource_4f6l1"]
+script = ExtResource("5_8xlja")
+start_beat = 380
+length = 3
+pitch = 6
+text = "~"
+
+[sub_resource type="Resource" id="Resource_8v8li"]
+script = ExtResource("4_ahm73")
+notes = Array[ExtResource("5_8xlja")]([SubResource("Resource_h4mn0"), SubResource("Resource_vo150"), SubResource("Resource_t4fu7"), SubResource("Resource_33qfm"), SubResource("Resource_lwtg0"), SubResource("Resource_jqw61"), SubResource("Resource_rqi8y"), SubResource("Resource_k4mhm"), SubResource("Resource_4f6l1")])
+start_beat = 350
+end_beat = 383
+
+[sub_resource type="Resource" id="Resource_hqkyi"]
+script = ExtResource("5_8xlja")
+start_beat = 384
+length = 7
+pitch = 14
+text = "Yum"
+
+[sub_resource type="Resource" id="Resource_qvk4p"]
+script = ExtResource("5_8xlja")
+start_beat = 392
+length = 3
+pitch = 13
+text = "my"
+
+[sub_resource type="Resource" id="Resource_hmjm5"]
+script = ExtResource("5_8xlja")
+start_beat = 396
+length = 3
+pitch = 11
+text = "~"
+
+[sub_resource type="Resource" id="Resource_gxldd"]
+script = ExtResource("5_8xlja")
+start_beat = 400
+length = 4
+pitch = 13
+text = " Cakes!"
+
+[sub_resource type="Resource" id="Resource_mp5ii"]
+script = ExtResource("5_8xlja")
+start_beat = 405
+length = 4
+pitch = 14
+text = "~"
+
+[sub_resource type="Resource" id="Resource_2jd5v"]
+script = ExtResource("4_ahm73")
+notes = Array[ExtResource("5_8xlja")]([SubResource("Resource_hqkyi"), SubResource("Resource_qvk4p"), SubResource("Resource_hmjm5"), SubResource("Resource_gxldd"), SubResource("Resource_mp5ii")])
+start_beat = 383
+end_beat = 413
+
+[sub_resource type="Resource" id="Resource_hgf8v"]
+script = ExtResource("5_8xlja")
+start_beat = 416
+length = 2
+pitch = 4
+text = "Tas"
+
+[sub_resource type="Resource" id="Resource_kkpf8"]
+script = ExtResource("5_8xlja")
+start_beat = 420
+length = 3
+pitch = 2
+text = "tie"
+
+[sub_resource type="Resource" id="Resource_2h8w5"]
+script = ExtResource("5_8xlja")
+start_beat = 424
+length = 2
+pitch = 4
+text = "r"
+
+[sub_resource type="Resource" id="Resource_c3cvx"]
+script = ExtResource("5_8xlja")
+start_beat = 427
+length = 3
+pitch = 6
+text = " than"
+
+[sub_resource type="Resource" id="Resource_j3hbe"]
+script = ExtResource("5_8xlja")
+start_beat = 432
+length = 1
+pitch = 2
+text = " nor"
+
+[sub_resource type="Resource" id="Resource_dgong"]
+script = ExtResource("5_8xlja")
+start_beat = 434
+length = 1
+pitch = -1
+text = "mal"
+
+[sub_resource type="Resource" id="Resource_hexvl"]
+script = ExtResource("5_8xlja")
+start_beat = 438
+length = 4
+pitch = -1
+text = " food"
+
+[sub_resource type="Resource" id="Resource_ttxjs"]
+script = ExtResource("4_ahm73")
+notes = Array[ExtResource("5_8xlja")]([SubResource("Resource_hgf8v"), SubResource("Resource_kkpf8"), SubResource("Resource_2h8w5"), SubResource("Resource_c3cvx"), SubResource("Resource_j3hbe"), SubResource("Resource_dgong"), SubResource("Resource_hexvl")])
+start_beat = 413
+end_beat = 445
+
+[sub_resource type="Resource" id="Resource_xn787"]
+script = ExtResource("5_8xlja")
+start_beat = 448
+length = 7
+pitch = 13
+text = "Yum"
+
+[sub_resource type="Resource" id="Resource_4b1ck"]
+script = ExtResource("5_8xlja")
+start_beat = 456
+length = 3
+pitch = 11
+text = "my"
+
+[sub_resource type="Resource" id="Resource_ko21w"]
+script = ExtResource("5_8xlja")
+start_beat = 460
+length = 3
+pitch = 9
+text = "~"
+
+[sub_resource type="Resource" id="Resource_le42e"]
+script = ExtResource("5_8xlja")
+start_beat = 464
+length = 4
+pitch = 11
+text = " Cakes!"
+
+[sub_resource type="Resource" id="Resource_jc262"]
+script = ExtResource("5_8xlja")
+start_beat = 469
+length = 4
+pitch = 13
+text = "~"
+
+[sub_resource type="Resource" id="Resource_jqrjy"]
+script = ExtResource("4_ahm73")
+notes = Array[ExtResource("5_8xlja")]([SubResource("Resource_xn787"), SubResource("Resource_4b1ck"), SubResource("Resource_ko21w"), SubResource("Resource_le42e"), SubResource("Resource_jc262")])
+start_beat = 445
+end_beat = 475
+
+[sub_resource type="Resource" id="Resource_cwdc4"]
+script = ExtResource("5_8xlja")
+start_beat = 478
+length = 1
+pitch = 4
+text = "De"
+
+[sub_resource type="Resource" id="Resource_5pkap"]
+script = ExtResource("5_8xlja")
+start_beat = 479
+length = 1
+pitch = 11
+text = "li"
+
+[sub_resource type="Resource" id="Resource_37mjf"]
+script = ExtResource("5_8xlja")
+start_beat = 483
+length = 1
+pitch = 6
+text = "cious"
+
+[sub_resource type="Resource" id="Resource_i0o6c"]
+script = ExtResource("5_8xlja")
+start_beat = 487
+length = 3
+pitch = 4
+text = " fresh"
+
+[sub_resource type="Resource" id="Resource_8wegi"]
+script = ExtResource("5_8xlja")
+start_beat = 495
+length = 3
+pitch = 4
+text = " baked"
+
+[sub_resource type="Resource" id="Resource_i2me1"]
+script = ExtResource("5_8xlja")
+type = 1
+start_beat = 503
+length = 1
+pitch = 6
+text = " good"
+
+[sub_resource type="Resource" id="Resource_rl4ko"]
+script = ExtResource("5_8xlja")
+type = 1
+start_beat = 505
+length = 1
+pitch = 4
+text = "~"
+
+[sub_resource type="Resource" id="Resource_2jdbk"]
+script = ExtResource("5_8xlja")
+type = 1
+start_beat = 507
+length = 4
+pitch = 6
+text = "~"
+
+[sub_resource type="Resource" id="Resource_sqgq6"]
+script = ExtResource("4_ahm73")
+notes = Array[ExtResource("5_8xlja")]([SubResource("Resource_cwdc4"), SubResource("Resource_5pkap"), SubResource("Resource_37mjf"), SubResource("Resource_i0o6c"), SubResource("Resource_8wegi"), SubResource("Resource_i2me1"), SubResource("Resource_rl4ko"), SubResource("Resource_2jdbk")])
+start_beat = 475
+end_beat = 520
+
+[sub_resource type="Resource" id="Resource_a6j1t"]
+script = ExtResource("5_8xlja")
+type = 3
+start_beat = 768
+length = 3
+pitch = 2
+text = "It"
+
+[sub_resource type="Resource" id="Resource_gfi1l"]
+script = ExtResource("5_8xlja")
+type = 3
+start_beat = 772
+length = 2
+pitch = 2
+text = " is"
+
+[sub_resource type="Resource" id="Resource_xoxhk"]
+script = ExtResource("5_8xlja")
+type = 3
+start_beat = 776
+length = 3
+pitch = 2
+text = " yum"
+
+[sub_resource type="Resource" id="Resource_f1fa5"]
+script = ExtResource("5_8xlja")
+type = 3
+start_beat = 780
+length = 2
+pitch = 2
+text = "my"
+
+[sub_resource type="Resource" id="Resource_hpt3r"]
+script = ExtResource("5_8xlja")
+type = 3
+start_beat = 784
+length = 3
+pitch = 2
+text = " for"
+
+[sub_resource type="Resource" id="Resource_j1gwj"]
+script = ExtResource("5_8xlja")
+type = 3
+start_beat = 788
+length = 2
+pitch = 2
+text = " your"
+
+[sub_resource type="Resource" id="Resource_w3abk"]
+script = ExtResource("5_8xlja")
+type = 3
+start_beat = 792
+length = 4
+pitch = 2
+text = " fat"
+
+[sub_resource type="Resource" id="Resource_0inea"]
+script = ExtResource("5_8xlja")
+type = 3
+start_beat = 797
+length = 2
+pitch = 2
+text = "her"
+
+[sub_resource type="Resource" id="Resource_i2vc7"]
+script = ExtResource("4_ahm73")
+notes = Array[ExtResource("5_8xlja")]([SubResource("Resource_a6j1t"), SubResource("Resource_gfi1l"), SubResource("Resource_xoxhk"), SubResource("Resource_f1fa5"), SubResource("Resource_hpt3r"), SubResource("Resource_j1gwj"), SubResource("Resource_w3abk"), SubResource("Resource_0inea")])
+start_beat = 520
+end_beat = 799
+
+[sub_resource type="Resource" id="Resource_htk4d"]
+script = ExtResource("5_8xlja")
+type = 3
+start_beat = 800
+length = 3
+pitch = 2
+text = "It"
+
+[sub_resource type="Resource" id="Resource_eaqw7"]
+script = ExtResource("5_8xlja")
+type = 3
+start_beat = 804
+length = 2
+pitch = 2
+text = " is"
+
+[sub_resource type="Resource" id="Resource_2t78x"]
+script = ExtResource("5_8xlja")
+type = 3
+start_beat = 808
+length = 2
+pitch = 2
+text = " yum"
+
+[sub_resource type="Resource" id="Resource_n7w48"]
+script = ExtResource("5_8xlja")
+type = 3
+start_beat = 811
+length = 2
+pitch = 2
+text = "my"
+
+[sub_resource type="Resource" id="Resource_k7xfn"]
+script = ExtResource("5_8xlja")
+type = 3
+start_beat = 816
+length = 3
+pitch = 2
+text = " for"
+
+[sub_resource type="Resource" id="Resource_te42c"]
+script = ExtResource("5_8xlja")
+type = 3
+start_beat = 820
+length = 2
+pitch = 2
+text = " your"
+
+[sub_resource type="Resource" id="Resource_8h4ke"]
+script = ExtResource("5_8xlja")
+type = 3
+start_beat = 824
+length = 3
+pitch = 2
+text = " mot"
+
+[sub_resource type="Resource" id="Resource_ni5ky"]
+script = ExtResource("5_8xlja")
+type = 3
+start_beat = 828
+length = 2
+pitch = 2
+text = "her"
+
+[sub_resource type="Resource" id="Resource_qe7bb"]
+script = ExtResource("4_ahm73")
+notes = Array[ExtResource("5_8xlja")]([SubResource("Resource_htk4d"), SubResource("Resource_eaqw7"), SubResource("Resource_2t78x"), SubResource("Resource_n7w48"), SubResource("Resource_k7xfn"), SubResource("Resource_te42c"), SubResource("Resource_8h4ke"), SubResource("Resource_ni5ky")])
+start_beat = 799
+end_beat = 831
+
+[sub_resource type="Resource" id="Resource_ymc82"]
+script = ExtResource("5_8xlja")
+type = 3
+start_beat = 832
+length = 2
+pitch = 2
+text = "It"
+
+[sub_resource type="Resource" id="Resource_3iyup"]
+script = ExtResource("5_8xlja")
+type = 3
+start_beat = 835
+length = 2
+pitch = 2
+text = " is"
+
+[sub_resource type="Resource" id="Resource_oi51u"]
+script = ExtResource("5_8xlja")
+type = 3
+start_beat = 839
+length = 3
+pitch = 2
+text = " yum"
+
+[sub_resource type="Resource" id="Resource_682j2"]
+script = ExtResource("5_8xlja")
+type = 3
+start_beat = 843
+length = 2
+pitch = 2
+text = "my"
+
+[sub_resource type="Resource" id="Resource_h0c5l"]
+script = ExtResource("5_8xlja")
+type = 3
+start_beat = 848
+length = 2
+pitch = 2
+text = " for"
+
+[sub_resource type="Resource" id="Resource_y4ed3"]
+script = ExtResource("5_8xlja")
+type = 3
+start_beat = 851
+length = 3
+pitch = 2
+text = " your"
+
+[sub_resource type="Resource" id="Resource_m6hph"]
+script = ExtResource("5_8xlja")
+type = 3
+start_beat = 856
+length = 3
+pitch = 2
+text = " brot"
+
+[sub_resource type="Resource" id="Resource_hjm7f"]
+script = ExtResource("5_8xlja")
+type = 3
+start_beat = 860
+length = 2
+pitch = 2
+text = "her"
+
+[sub_resource type="Resource" id="Resource_atg6q"]
+script = ExtResource("4_ahm73")
+notes = Array[ExtResource("5_8xlja")]([SubResource("Resource_ymc82"), SubResource("Resource_3iyup"), SubResource("Resource_oi51u"), SubResource("Resource_682j2"), SubResource("Resource_h0c5l"), SubResource("Resource_y4ed3"), SubResource("Resource_m6hph"), SubResource("Resource_hjm7f")])
+start_beat = 831
+end_beat = 863
+
+[sub_resource type="Resource" id="Resource_pmo8n"]
+script = ExtResource("5_8xlja")
+type = 3
+start_beat = 864
+length = 3
+pitch = 2
+text = "E"
+
+[sub_resource type="Resource" id="Resource_1x806"]
+script = ExtResource("5_8xlja")
+type = 3
+start_beat = 868
+length = 2
+pitch = 2
+text = "ven"
+
+[sub_resource type="Resource" id="Resource_2a1a3"]
+script = ExtResource("5_8xlja")
+type = 3
+start_beat = 872
+length = 2
+pitch = 2
+text = " yum"
+
+[sub_resource type="Resource" id="Resource_hnhl5"]
+script = ExtResource("5_8xlja")
+type = 3
+start_beat = 875
+length = 2
+pitch = 2
+text = "my"
+
+[sub_resource type="Resource" id="Resource_7qn7h"]
+script = ExtResource("5_8xlja")
+type = 3
+start_beat = 880
+length = 2
+pitch = 2
+text = " for"
+
+[sub_resource type="Resource" id="Resource_gplht"]
+script = ExtResource("5_8xlja")
+type = 3
+start_beat = 883
+length = 2
+pitch = 2
+text = " your"
+
+[sub_resource type="Resource" id="Resource_3bsvt"]
+script = ExtResource("5_8xlja")
+type = 3
+start_beat = 887
+length = 3
+pitch = 2
+text = " sis"
+
+[sub_resource type="Resource" id="Resource_umeyj"]
+script = ExtResource("5_8xlja")
+type = 3
+start_beat = 892
+length = 2
+pitch = 2
+text = "ter"
+
+[sub_resource type="Resource" id="Resource_20imm"]
+script = ExtResource("4_ahm73")
+notes = Array[ExtResource("5_8xlja")]([SubResource("Resource_pmo8n"), SubResource("Resource_1x806"), SubResource("Resource_2a1a3"), SubResource("Resource_hnhl5"), SubResource("Resource_7qn7h"), SubResource("Resource_gplht"), SubResource("Resource_3bsvt"), SubResource("Resource_umeyj")])
+start_beat = 863
+end_beat = 895
+
+[sub_resource type="Resource" id="Resource_5dhq7"]
+script = ExtResource("5_8xlja")
+type = 3
+start_beat = 896
+length = 7
+pitch = 14
+text = "Yum"
+
+[sub_resource type="Resource" id="Resource_xmrp8"]
+script = ExtResource("5_8xlja")
+type = 3
+start_beat = 904
+length = 3
+pitch = 13
+text = "my"
+
+[sub_resource type="Resource" id="Resource_2uppj"]
+script = ExtResource("5_8xlja")
+type = 3
+start_beat = 908
+length = 3
+pitch = 11
+text = "~"
+
+[sub_resource type="Resource" id="Resource_581hk"]
+script = ExtResource("4_ahm73")
+notes = Array[ExtResource("5_8xlja")]([SubResource("Resource_5dhq7"), SubResource("Resource_xmrp8"), SubResource("Resource_2uppj")])
+start_beat = 895
+end_beat = 911
+
+[sub_resource type="Resource" id="Resource_pfy84"]
+script = ExtResource("5_8xlja")
+type = 3
+start_beat = 912
+length = 2
+pitch = 2
+text = "Taste"
+
+[sub_resource type="Resource" id="Resource_g55df"]
+script = ExtResource("5_8xlja")
+type = 3
+start_beat = 916
+length = 3
+pitch = 2
+text = " so"
+
+[sub_resource type="Resource" id="Resource_d7yd8"]
+script = ExtResource("5_8xlja")
+type = 3
+start_beat = 920
+length = 4
+pitch = 2
+text = " good"
+
+[sub_resource type="Resource" id="Resource_26v0v"]
+script = ExtResource("4_ahm73")
+notes = Array[ExtResource("5_8xlja")]([SubResource("Resource_pfy84"), SubResource("Resource_g55df"), SubResource("Resource_d7yd8")])
+start_beat = 911
+end_beat = 926
+
+[sub_resource type="Resource" id="Resource_tpot8"]
+script = ExtResource("5_8xlja")
+type = 3
+start_beat = 928
+length = 3
+pitch = 2
+text = "Please"
+
+[sub_resource type="Resource" id="Resource_qqqk8"]
+script = ExtResource("5_8xlja")
+type = 3
+start_beat = 932
+length = 3
+pitch = 2
+text = " don't"
+
+[sub_resource type="Resource" id="Resource_acsc5"]
+script = ExtResource("5_8xlja")
+type = 3
+start_beat = 936
+length = 2
+pitch = 2
+text = " ask"
+
+[sub_resource type="Resource" id="Resource_hbu0g"]
+script = ExtResource("5_8xlja")
+type = 3
+start_beat = 939
+length = 3
+pitch = 2
+text = " me"
+
+[sub_resource type="Resource" id="Resource_jkm4y"]
+script = ExtResource("5_8xlja")
+type = 3
+start_beat = 943
+length = 4
+pitch = 2
+text = " why"
+
+[sub_resource type="Resource" id="Resource_6kmjm"]
+script = ExtResource("5_8xlja")
+type = 3
+start_beat = 948
+length = 2
+pitch = 2
+text = " you"
+
+[sub_resource type="Resource" id="Resource_n6gw4"]
+script = ExtResource("5_8xlja")
+type = 3
+start_beat = 953
+length = 4
+pitch = 2
+text = " should"
+
+[sub_resource type="Resource" id="Resource_1t1o2"]
+script = ExtResource("4_ahm73")
+notes = Array[ExtResource("5_8xlja")]([SubResource("Resource_tpot8"), SubResource("Resource_qqqk8"), SubResource("Resource_acsc5"), SubResource("Resource_hbu0g"), SubResource("Resource_jkm4y"), SubResource("Resource_6kmjm"), SubResource("Resource_n6gw4")])
+start_beat = 926
+end_beat = 957
+
+[sub_resource type="Resource" id="Resource_ca3wp"]
+script = ExtResource("5_8xlja")
+type = 3
+start_beat = 960
+length = 2
+pitch = 2
+text = "Eat"
+
+[sub_resource type="Resource" id="Resource_riava"]
+script = ExtResource("5_8xlja")
+type = 3
+start_beat = 963
+length = 2
+pitch = 2
+text = " it"
+
+[sub_resource type="Resource" id="Resource_cplkp"]
+script = ExtResource("5_8xlja")
+type = 3
+start_beat = 967
+length = 3
+pitch = 2
+text = " like"
+
+[sub_resource type="Resource" id="Resource_brqip"]
+script = ExtResource("5_8xlja")
+type = 3
+start_beat = 972
+length = 2
+pitch = 2
+text = " your"
+
+[sub_resource type="Resource" id="Resource_5l7lk"]
+script = ExtResource("5_8xlja")
+type = 3
+start_beat = 976
+length = 2
+pitch = 2
+text = " favo"
+
+[sub_resource type="Resource" id="Resource_7r1iv"]
+script = ExtResource("5_8xlja")
+type = 3
+start_beat = 979
+length = 2
+pitch = 2
+text = "rite"
+
+[sub_resource type="Resource" id="Resource_5is1b"]
+script = ExtResource("5_8xlja")
+type = 3
+start_beat = 985
+length = 4
+pitch = 2
+text = " food"
+
+[sub_resource type="Resource" id="Resource_xjj78"]
+script = ExtResource("4_ahm73")
+notes = Array[ExtResource("5_8xlja")]([SubResource("Resource_ca3wp"), SubResource("Resource_riava"), SubResource("Resource_cplkp"), SubResource("Resource_brqip"), SubResource("Resource_5l7lk"), SubResource("Resource_7r1iv"), SubResource("Resource_5is1b")])
+start_beat = 957
+end_beat = 990
+
+[sub_resource type="Resource" id="Resource_5v8uf"]
+script = ExtResource("5_8xlja")
+type = 3
+start_beat = 992
+length = 3
+pitch = 2
+text = "Yum"
+
+[sub_resource type="Resource" id="Resource_qbg2t"]
+script = ExtResource("5_8xlja")
+type = 3
+start_beat = 996
+length = 2
+pitch = 2
+text = "my"
+
+[sub_resource type="Resource" id="Resource_l2oop"]
+script = ExtResource("5_8xlja")
+type = 3
+start_beat = 1000
+length = 3
+pitch = 2
+text = " Cakes,"
+
+[sub_resource type="Resource" id="Resource_a6hk1"]
+script = ExtResource("5_8xlja")
+type = 3
+start_beat = 1008
+length = 3
+pitch = 2
+text = " eat"
+
+[sub_resource type="Resource" id="Resource_id086"]
+script = ExtResource("5_8xlja")
+type = 3
+start_beat = 1012
+length = 2
+pitch = 2
+text = " it"
+
+[sub_resource type="Resource" id="Resource_s3aba"]
+script = ExtResource("5_8xlja")
+type = 3
+start_beat = 1016
+length = 6
+pitch = 2
+text = " dude!"
+
+[sub_resource type="Resource" id="Resource_rn0m7"]
+script = ExtResource("4_ahm73")
+notes = Array[ExtResource("5_8xlja")]([SubResource("Resource_5v8uf"), SubResource("Resource_qbg2t"), SubResource("Resource_l2oop"), SubResource("Resource_a6hk1"), SubResource("Resource_id086"), SubResource("Resource_s3aba")])
+start_beat = 990
+end_beat = 1023
+
+[sub_resource type="Resource" id="Resource_u3aql"]
+script = ExtResource("5_8xlja")
+type = 1
+start_beat = 1024
+length = 7
+pitch = 14
+text = "Yum"
+
+[sub_resource type="Resource" id="Resource_xhs2h"]
+script = ExtResource("5_8xlja")
+type = 1
+start_beat = 1032
+length = 3
+pitch = 13
+text = "my"
+
+[sub_resource type="Resource" id="Resource_1w5aq"]
+script = ExtResource("5_8xlja")
+type = 1
+start_beat = 1036
+length = 3
+pitch = 11
+text = "~"
+
+[sub_resource type="Resource" id="Resource_ahvcm"]
+script = ExtResource("5_8xlja")
+type = 1
+start_beat = 1040
+length = 4
+pitch = 13
+text = " Cakes!"
+
+[sub_resource type="Resource" id="Resource_e2sl7"]
+script = ExtResource("5_8xlja")
+type = 1
+start_beat = 1045
+length = 4
+pitch = 14
+text = "~  "
+
+[sub_resource type="Resource" id="Resource_iysrf"]
+script = ExtResource("4_ahm73")
+notes = Array[ExtResource("5_8xlja")]([SubResource("Resource_u3aql"), SubResource("Resource_xhs2h"), SubResource("Resource_1w5aq"), SubResource("Resource_ahvcm"), SubResource("Resource_e2sl7")])
+start_beat = 1023
+end_beat = 1053
+
+[sub_resource type="Resource" id="Resource_slxy1"]
+script = ExtResource("5_8xlja")
+start_beat = 1056
+length = 2
+pitch = 4
+text = "Makes"
+
+[sub_resource type="Resource" id="Resource_2f882"]
+script = ExtResource("5_8xlja")
+start_beat = 1061
+length = 1
+pitch = 4
+text = " you"
+
+[sub_resource type="Resource" id="Resource_6le40"]
+script = ExtResource("5_8xlja")
+start_beat = 1064
+length = 2
+pitch = 4
+text = " feel"
+
+[sub_resource type="Resource" id="Resource_shttm"]
+script = ExtResource("5_8xlja")
+start_beat = 1067
+length = 2
+pitch = 6
+text = " like"
+
+[sub_resource type="Resource" id="Resource_4yxfe"]
+script = ExtResource("5_8xlja")
+start_beat = 1072
+length = 1
+pitch = 2
+text = " po"
+
+[sub_resource type="Resource" id="Resource_03284"]
+script = ExtResource("5_8xlja")
+start_beat = 1074
+length = 1
+pitch = -1
+text = "e"
+
+[sub_resource type="Resource" id="Resource_kf4cj"]
+script = ExtResource("5_8xlja")
+start_beat = 1078
+length = 3
+pitch = -1
+text = "try"
+
+[sub_resource type="Resource" id="Resource_i3nge"]
+script = ExtResource("4_ahm73")
+notes = Array[ExtResource("5_8xlja")]([SubResource("Resource_slxy1"), SubResource("Resource_2f882"), SubResource("Resource_6le40"), SubResource("Resource_shttm"), SubResource("Resource_4yxfe"), SubResource("Resource_03284"), SubResource("Resource_kf4cj")])
+start_beat = 1053
+end_beat = 1086
+
+[sub_resource type="Resource" id="Resource_rdutl"]
+script = ExtResource("5_8xlja")
+start_beat = 1088
+length = 7
+pitch = 13
+text = "Yum"
+
+[sub_resource type="Resource" id="Resource_ndqwa"]
+script = ExtResource("5_8xlja")
+start_beat = 1096
+length = 3
+pitch = 11
+text = "my"
+
+[sub_resource type="Resource" id="Resource_brhwv"]
+script = ExtResource("5_8xlja")
+start_beat = 1100
+length = 3
+pitch = 9
+text = "~"
+
+[sub_resource type="Resource" id="Resource_qhqd1"]
+script = ExtResource("5_8xlja")
+start_beat = 1104
+length = 4
+pitch = 11
+text = " Cakes!"
+
+[sub_resource type="Resource" id="Resource_pyncn"]
+script = ExtResource("5_8xlja")
+start_beat = 1109
+length = 4
+pitch = 13
+text = "~"
+
+[sub_resource type="Resource" id="Resource_frk78"]
+script = ExtResource("4_ahm73")
+notes = Array[ExtResource("5_8xlja")]([SubResource("Resource_rdutl"), SubResource("Resource_ndqwa"), SubResource("Resource_brhwv"), SubResource("Resource_qhqd1"), SubResource("Resource_pyncn")])
+start_beat = 1086
+end_beat = 1118
+
+[sub_resource type="Resource" id="Resource_qmqbq"]
+script = ExtResource("5_8xlja")
+start_beat = 1120
+length = 3
+pitch = 11
+text = "Come"
+
+[sub_resource type="Resource" id="Resource_5o8qn"]
+script = ExtResource("5_8xlja")
+start_beat = 1124
+length = 2
+pitch = 6
+text = " on"
+
+[sub_resource type="Resource" id="Resource_a47nc"]
+script = ExtResource("5_8xlja")
+start_beat = 1128
+length = 3
+pitch = 4
+text = " peo"
+
+[sub_resource type="Resource" id="Resource_kjg26"]
+script = ExtResource("5_8xlja")
+start_beat = 1132
+length = 3
+pitch = 2
+text = "ple"
+
+[sub_resource type="Resource" id="Resource_sm5vi"]
+script = ExtResource("5_8xlja")
+start_beat = 1136
+length = 3
+pitch = 4
+text = " dance"
+
+[sub_resource type="Resource" id="Resource_eh4b0"]
+script = ExtResource("5_8xlja")
+start_beat = 1140
+length = 3
+pitch = 6
+text = " with"
+
+[sub_resource type="Resource" id="Resource_jdp4f"]
+script = ExtResource("5_8xlja")
+start_beat = 1144
+length = 3
+pitch = 2
+text = " me"
+
+[sub_resource type="Resource" id="Resource_barer"]
+script = ExtResource("4_ahm73")
+notes = Array[ExtResource("5_8xlja")]([SubResource("Resource_qmqbq"), SubResource("Resource_5o8qn"), SubResource("Resource_a47nc"), SubResource("Resource_kjg26"), SubResource("Resource_sm5vi"), SubResource("Resource_eh4b0"), SubResource("Resource_jdp4f")])
+start_beat = 1118
+end_beat = 1151
+
+[sub_resource type="Resource" id="Resource_p3e2g"]
+script = ExtResource("5_8xlja")
+start_beat = 1152
+length = 7
+pitch = 14
+text = "Yum"
+
+[sub_resource type="Resource" id="Resource_hbsco"]
+script = ExtResource("5_8xlja")
+start_beat = 1160
+length = 3
+pitch = 13
+text = "my"
+
+[sub_resource type="Resource" id="Resource_uerk1"]
+script = ExtResource("5_8xlja")
+start_beat = 1164
+length = 3
+pitch = 11
+text = "~"
+
+[sub_resource type="Resource" id="Resource_h38sh"]
+script = ExtResource("5_8xlja")
+start_beat = 1168
+length = 4
+pitch = 13
+text = " Cakes!"
+
+[sub_resource type="Resource" id="Resource_dhuwb"]
+script = ExtResource("5_8xlja")
+start_beat = 1173
+length = 4
+pitch = 14
+text = "~"
+
+[sub_resource type="Resource" id="Resource_oppwn"]
+script = ExtResource("4_ahm73")
+notes = Array[ExtResource("5_8xlja")]([SubResource("Resource_p3e2g"), SubResource("Resource_hbsco"), SubResource("Resource_uerk1"), SubResource("Resource_h38sh"), SubResource("Resource_dhuwb")])
+start_beat = 1151
+end_beat = 1181
+
+[sub_resource type="Resource" id="Resource_m2nwp"]
+script = ExtResource("5_8xlja")
+start_beat = 1184
+length = 2
+pitch = 4
+text = "Tas"
+
+[sub_resource type="Resource" id="Resource_l0bwo"]
+script = ExtResource("5_8xlja")
+start_beat = 1188
+length = 3
+pitch = 2
+text = "tie"
+
+[sub_resource type="Resource" id="Resource_fajtb"]
+script = ExtResource("5_8xlja")
+start_beat = 1192
+length = 2
+pitch = 4
+text = "r"
+
+[sub_resource type="Resource" id="Resource_dino7"]
+script = ExtResource("5_8xlja")
+start_beat = 1195
+length = 3
+pitch = 6
+text = " than"
+
+[sub_resource type="Resource" id="Resource_w16o6"]
+script = ExtResource("5_8xlja")
+start_beat = 1200
+length = 1
+pitch = 2
+text = " nor"
+
+[sub_resource type="Resource" id="Resource_gk8pp"]
+script = ExtResource("5_8xlja")
+start_beat = 1202
+length = 1
+pitch = -1
+text = "mal"
+
+[sub_resource type="Resource" id="Resource_oo74o"]
+script = ExtResource("5_8xlja")
+start_beat = 1206
+length = 4
+pitch = -1
+text = " food"
+
+[sub_resource type="Resource" id="Resource_tktsn"]
+script = ExtResource("4_ahm73")
+notes = Array[ExtResource("5_8xlja")]([SubResource("Resource_m2nwp"), SubResource("Resource_l0bwo"), SubResource("Resource_fajtb"), SubResource("Resource_dino7"), SubResource("Resource_w16o6"), SubResource("Resource_gk8pp"), SubResource("Resource_oo74o")])
+start_beat = 1181
+end_beat = 1213
+
+[sub_resource type="Resource" id="Resource_5uhqk"]
+script = ExtResource("5_8xlja")
+start_beat = 1216
+length = 7
+pitch = 13
+text = "Yum"
+
+[sub_resource type="Resource" id="Resource_dgpb3"]
+script = ExtResource("5_8xlja")
+start_beat = 1224
+length = 3
+pitch = 11
+text = "my"
+
+[sub_resource type="Resource" id="Resource_1x7qt"]
+script = ExtResource("5_8xlja")
+start_beat = 1228
+length = 3
+pitch = 9
+text = "~"
+
+[sub_resource type="Resource" id="Resource_sb4jt"]
+script = ExtResource("5_8xlja")
+start_beat = 1232
+length = 4
+pitch = 11
+text = " Cakes!"
+
+[sub_resource type="Resource" id="Resource_algk4"]
+script = ExtResource("5_8xlja")
+start_beat = 1237
+length = 4
+pitch = 13
+text = "~"
+
+[sub_resource type="Resource" id="Resource_0ptd7"]
+script = ExtResource("4_ahm73")
+notes = Array[ExtResource("5_8xlja")]([SubResource("Resource_5uhqk"), SubResource("Resource_dgpb3"), SubResource("Resource_1x7qt"), SubResource("Resource_sb4jt"), SubResource("Resource_algk4")])
+start_beat = 1213
+end_beat = 1243
+
+[sub_resource type="Resource" id="Resource_5dp07"]
+script = ExtResource("5_8xlja")
+start_beat = 1246
+length = 1
+pitch = 4
+text = "De"
+
+[sub_resource type="Resource" id="Resource_my4du"]
+script = ExtResource("5_8xlja")
+start_beat = 1247
+length = 1
+pitch = 11
+text = "li"
+
+[sub_resource type="Resource" id="Resource_8rjl3"]
+script = ExtResource("5_8xlja")
+start_beat = 1251
+length = 1
+pitch = 6
+text = "cious"
+
+[sub_resource type="Resource" id="Resource_cnl5n"]
+script = ExtResource("5_8xlja")
+start_beat = 1255
+length = 3
+pitch = 4
+text = " fresh"
+
+[sub_resource type="Resource" id="Resource_mmain"]
+script = ExtResource("5_8xlja")
+start_beat = 1263
+length = 3
+pitch = 4
+text = " baked"
+
+[sub_resource type="Resource" id="Resource_3voj7"]
+script = ExtResource("5_8xlja")
+type = 1
+start_beat = 1272
+length = 1
+pitch = 6
+text = " good"
+
+[sub_resource type="Resource" id="Resource_5ueuh"]
+script = ExtResource("5_8xlja")
+type = 1
+start_beat = 1274
+length = 1
+pitch = 4
+text = "~"
+
+[sub_resource type="Resource" id="Resource_qhdhj"]
+script = ExtResource("5_8xlja")
+type = 1
+start_beat = 1276
+length = 3
+pitch = 6
+text = "~"
+
+[sub_resource type="Resource" id="Resource_jpkym"]
+script = ExtResource("4_ahm73")
+notes = Array[ExtResource("5_8xlja")]([SubResource("Resource_5dp07"), SubResource("Resource_my4du"), SubResource("Resource_8rjl3"), SubResource("Resource_cnl5n"), SubResource("Resource_mmain"), SubResource("Resource_3voj7"), SubResource("Resource_5ueuh"), SubResource("Resource_qhdhj")])
+start_beat = 1243
+end_beat = 1279
+
+[sub_resource type="Resource" id="Resource_elrh7"]
+script = ExtResource("5_8xlja")
+start_beat = 1280
+length = 7
+pitch = 14
+text = "Yum"
+
+[sub_resource type="Resource" id="Resource_tocfw"]
+script = ExtResource("5_8xlja")
+start_beat = 1288
+length = 3
+pitch = 13
+text = "my"
+
+[sub_resource type="Resource" id="Resource_mordv"]
+script = ExtResource("5_8xlja")
+start_beat = 1292
+length = 3
+pitch = 11
+text = "~"
+
+[sub_resource type="Resource" id="Resource_ek8j1"]
+script = ExtResource("5_8xlja")
+start_beat = 1296
+length = 4
+pitch = 13
+text = " Cakes!"
+
+[sub_resource type="Resource" id="Resource_3nw21"]
+script = ExtResource("5_8xlja")
+start_beat = 1301
+length = 4
+pitch = 14
+text = "~"
+
+[sub_resource type="Resource" id="Resource_vj8a0"]
+script = ExtResource("4_ahm73")
+notes = Array[ExtResource("5_8xlja")]([SubResource("Resource_elrh7"), SubResource("Resource_tocfw"), SubResource("Resource_mordv"), SubResource("Resource_ek8j1"), SubResource("Resource_3nw21")])
+start_beat = 1279
+end_beat = 1309
+
+[sub_resource type="Resource" id="Resource_klqjq"]
+script = ExtResource("5_8xlja")
+type = 2
+start_beat = 1313
+length = 5
+pitch = 2
+text = "So,"
+
+[sub_resource type="Resource" id="Resource_3hurk"]
+script = ExtResource("5_8xlja")
+type = 2
+start_beat = 1322
+length = 2
+pitch = 2
+text = " ho"
+
+[sub_resource type="Resource" id="Resource_imdik"]
+script = ExtResource("5_8xlja")
+type = 2
+start_beat = 1325
+length = 2
+pitch = 2
+text = "mie"
+
+[sub_resource type="Resource" id="Resource_38lpr"]
+script = ExtResource("5_8xlja")
+type = 2
+start_beat = 1328
+length = 5
+pitch = 2
+text = " boys"
+
+[sub_resource type="Resource" id="Resource_ur3pk"]
+script = ExtResource("4_ahm73")
+notes = Array[ExtResource("5_8xlja")]([SubResource("Resource_klqjq"), SubResource("Resource_3hurk"), SubResource("Resource_imdik"), SubResource("Resource_38lpr")])
+start_beat = 1309
+end_beat = 1339
+
+[sub_resource type="Resource" id="Resource_hembo"]
+script = ExtResource("5_8xlja")
+start_beat = 1344
+length = 7
+pitch = 13
+text = "Yum"
+
+[sub_resource type="Resource" id="Resource_ndndg"]
+script = ExtResource("5_8xlja")
+start_beat = 1352
+length = 3
+pitch = 11
+text = "my"
+
+[sub_resource type="Resource" id="Resource_pqxnv"]
+script = ExtResource("5_8xlja")
+start_beat = 1356
+length = 3
+pitch = 9
+text = "~"
+
+[sub_resource type="Resource" id="Resource_ni8ne"]
+script = ExtResource("5_8xlja")
+start_beat = 1360
+length = 4
+pitch = 11
+text = " Cakes!"
+
+[sub_resource type="Resource" id="Resource_m5xe8"]
+script = ExtResource("5_8xlja")
+start_beat = 1365
+length = 4
+pitch = 13
+text = "~"
+
+[sub_resource type="Resource" id="Resource_mhekv"]
+script = ExtResource("4_ahm73")
+notes = Array[ExtResource("5_8xlja")]([SubResource("Resource_hembo"), SubResource("Resource_ndndg"), SubResource("Resource_pqxnv"), SubResource("Resource_ni8ne"), SubResource("Resource_m5xe8")])
+start_beat = 1339
+end_beat = 1372
+
+[sub_resource type="Resource" id="Resource_dq4x8"]
+script = ExtResource("5_8xlja")
+type = 2
+start_beat = 1375
+length = 2
+pitch = 2
+text = "If"
+
+[sub_resource type="Resource" id="Resource_yfbtd"]
+script = ExtResource("5_8xlja")
+type = 2
+start_beat = 1379
+length = 1
+pitch = 2
+text = " you"
+
+[sub_resource type="Resource" id="Resource_hgfkm"]
+script = ExtResource("5_8xlja")
+type = 2
+start_beat = 1381
+length = 3
+pitch = 2
+text = " want"
+
+[sub_resource type="Resource" id="Resource_5ua2d"]
+script = ExtResource("5_8xlja")
+type = 2
+start_beat = 1386
+length = 1
+pitch = 2
+text = " to"
+
+[sub_resource type="Resource" id="Resource_p0fen"]
+script = ExtResource("5_8xlja")
+type = 2
+start_beat = 1388
+length = 1
+pitch = 2
+text = " be"
+
+[sub_resource type="Resource" id="Resource_4wcm7"]
+script = ExtResource("5_8xlja")
+type = 2
+start_beat = 1393
+length = 7
+pitch = 2
+text = " cool"
+
+[sub_resource type="Resource" id="Resource_fosef"]
+script = ExtResource("4_ahm73")
+notes = Array[ExtResource("5_8xlja")]([SubResource("Resource_dq4x8"), SubResource("Resource_yfbtd"), SubResource("Resource_hgfkm"), SubResource("Resource_5ua2d"), SubResource("Resource_p0fen"), SubResource("Resource_4wcm7")])
+start_beat = 1372
+end_beat = 1404
+
+[sub_resource type="Resource" id="Resource_kocud"]
+script = ExtResource("5_8xlja")
+start_beat = 1408
+length = 7
+pitch = 14
+text = "Yum"
+
+[sub_resource type="Resource" id="Resource_ljd82"]
+script = ExtResource("5_8xlja")
+start_beat = 1416
+length = 3
+pitch = 13
+text = "my"
+
+[sub_resource type="Resource" id="Resource_6lqtb"]
+script = ExtResource("5_8xlja")
+start_beat = 1420
+length = 3
+pitch = 11
+text = "~"
+
+[sub_resource type="Resource" id="Resource_1ixyv"]
+script = ExtResource("5_8xlja")
+start_beat = 1424
+length = 4
+pitch = 13
+text = " Cakes!"
+
+[sub_resource type="Resource" id="Resource_r3ymd"]
+script = ExtResource("5_8xlja")
+start_beat = 1429
+length = 4
+pitch = 15
+text = "~"
+
+[sub_resource type="Resource" id="Resource_86qrf"]
+script = ExtResource("4_ahm73")
+notes = Array[ExtResource("5_8xlja")]([SubResource("Resource_kocud"), SubResource("Resource_ljd82"), SubResource("Resource_6lqtb"), SubResource("Resource_1ixyv"), SubResource("Resource_r3ymd")])
+start_beat = 1404
+end_beat = 1437
+
+[sub_resource type="Resource" id="Resource_e8nvq"]
+script = ExtResource("5_8xlja")
+type = 2
+start_beat = 1441
+length = 2
+pitch = 2
+text = "Then"
+
+[sub_resource type="Resource" id="Resource_attdk"]
+script = ExtResource("5_8xlja")
+type = 2
+start_beat = 1444
+length = 4
+pitch = 2
+text = " buy"
+
+[sub_resource type="Resource" id="Resource_o5pmf"]
+script = ExtResource("5_8xlja")
+type = 2
+start_beat = 1450
+length = 3
+pitch = 2
+text = " Yum"
+
+[sub_resource type="Resource" id="Resource_i6w1g"]
+script = ExtResource("5_8xlja")
+type = 2
+start_beat = 1454
+length = 1
+pitch = 2
+text = "my"
+
+[sub_resource type="Resource" id="Resource_ejayd"]
+script = ExtResource("5_8xlja")
+type = 2
+start_beat = 1456
+length = 3
+pitch = 2
+text = " Cakes"
+
+[sub_resource type="Resource" id="Resource_3fwha"]
+script = ExtResource("4_ahm73")
+notes = Array[ExtResource("5_8xlja")]([SubResource("Resource_e8nvq"), SubResource("Resource_attdk"), SubResource("Resource_o5pmf"), SubResource("Resource_i6w1g"), SubResource("Resource_ejayd")])
+start_beat = 1437
+end_beat = 1464
+
+[sub_resource type="Resource" id="Resource_cko6b"]
+script = ExtResource("5_8xlja")
+start_beat = 1472
+length = 7
+pitch = 13
+text = "Yum"
+
+[sub_resource type="Resource" id="Resource_70ghp"]
+script = ExtResource("5_8xlja")
+start_beat = 1480
+length = 3
+pitch = 11
+text = "my"
+
+[sub_resource type="Resource" id="Resource_au610"]
+script = ExtResource("5_8xlja")
+start_beat = 1484
+length = 3
+pitch = 9
+text = "~"
+
+[sub_resource type="Resource" id="Resource_cjtv8"]
+script = ExtResource("5_8xlja")
+start_beat = 1488
+length = 4
+pitch = 11
+text = " Cakes!"
+
+[sub_resource type="Resource" id="Resource_chhwt"]
+script = ExtResource("5_8xlja")
+start_beat = 1493
+length = 4
+pitch = 13
+text = "~"
+
+[sub_resource type="Resource" id="Resource_qeii5"]
+script = ExtResource("4_ahm73")
+notes = Array[ExtResource("5_8xlja")]([SubResource("Resource_cko6b"), SubResource("Resource_70ghp"), SubResource("Resource_au610"), SubResource("Resource_cjtv8"), SubResource("Resource_chhwt")])
+start_beat = 1464
+end_beat = 1499
+
+[sub_resource type="Resource" id="Resource_2cj04"]
+script = ExtResource("5_8xlja")
+type = 3
+start_beat = 1500
+length = 1
+pitch = 2
+text = "And"
+
+[sub_resource type="Resource" id="Resource_ouokj"]
+script = ExtResource("5_8xlja")
+type = 3
+start_beat = 1502
+length = 1
+pitch = 2
+text = " for"
+
+[sub_resource type="Resource" id="Resource_scv71"]
+script = ExtResource("5_8xlja")
+type = 3
+start_beat = 1504
+length = 3
+pitch = 2
+text = " one"
+
+[sub_resource type="Resource" id="Resource_blg84"]
+script = ExtResource("5_8xlja")
+type = 3
+start_beat = 1508
+length = 1
+pitch = 2
+text = " last"
+
+[sub_resource type="Resource" id="Resource_2ifj8"]
+script = ExtResource("5_8xlja")
+type = 3
+start_beat = 1512
+length = 3
+pitch = 2
+text = " time,"
+
+[sub_resource type="Resource" id="Resource_w4vrx"]
+script = ExtResource("5_8xlja")
+type = 3
+start_beat = 1520
+length = 3
+pitch = 2
+text = " eat"
+
+[sub_resource type="Resource" id="Resource_nqivv"]
+script = ExtResource("5_8xlja")
+type = 3
+start_beat = 1524
+length = 2
+pitch = 2
+text = " it"
+
+[sub_resource type="Resource" id="Resource_0sqe6"]
+script = ExtResource("5_8xlja")
+type = 3
+start_beat = 1528
+length = 6
+pitch = 2
+text = " dude!"
+
+[sub_resource type="Resource" id="Resource_3enab"]
+script = ExtResource("4_ahm73")
+notes = Array[ExtResource("5_8xlja")]([SubResource("Resource_2cj04"), SubResource("Resource_ouokj"), SubResource("Resource_scv71"), SubResource("Resource_blg84"), SubResource("Resource_2ifj8"), SubResource("Resource_w4vrx"), SubResource("Resource_nqivv"), SubResource("Resource_0sqe6")])
+start_beat = 1499
+end_beat = 1535
+
+[sub_resource type="Resource" id="Resource_nt24q"]
+script = ExtResource("5_8xlja")
+type = 1
+start_beat = 1536
+length = 7
+pitch = 14
+text = "Yum"
+
+[sub_resource type="Resource" id="Resource_cvnge"]
+script = ExtResource("5_8xlja")
+type = 1
+start_beat = 1544
+length = 3
+pitch = 13
+text = "my"
+
+[sub_resource type="Resource" id="Resource_bn51e"]
+script = ExtResource("5_8xlja")
+type = 1
+start_beat = 1548
+length = 3
+pitch = 11
+text = "~"
+
+[sub_resource type="Resource" id="Resource_5188o"]
+script = ExtResource("5_8xlja")
+type = 1
+start_beat = 1552
+length = 4
+pitch = 13
+text = " Cakes!"
+
+[sub_resource type="Resource" id="Resource_cgwsw"]
+script = ExtResource("5_8xlja")
+type = 1
+start_beat = 1557
+length = 4
+pitch = 14
+text = "~  "
+
+[sub_resource type="Resource" id="Resource_1m8ep"]
+script = ExtResource("4_ahm73")
+notes = Array[ExtResource("5_8xlja")]([SubResource("Resource_nt24q"), SubResource("Resource_cvnge"), SubResource("Resource_bn51e"), SubResource("Resource_5188o"), SubResource("Resource_cgwsw")])
+start_beat = 1535
+end_beat = 1565
+
+[sub_resource type="Resource" id="Resource_t41kq"]
+script = ExtResource("5_8xlja")
+start_beat = 1568
+length = 2
+pitch = 4
+text = "Makes"
+
+[sub_resource type="Resource" id="Resource_egujy"]
+script = ExtResource("5_8xlja")
+start_beat = 1572
+length = 1
+pitch = 4
+text = " you"
+
+[sub_resource type="Resource" id="Resource_7jng5"]
+script = ExtResource("5_8xlja")
+start_beat = 1575
+length = 3
+pitch = 4
+text = " feel"
+
+[sub_resource type="Resource" id="Resource_7sc3m"]
+script = ExtResource("5_8xlja")
+start_beat = 1579
+length = 2
+pitch = 6
+text = " like"
+
+[sub_resource type="Resource" id="Resource_xs35u"]
+script = ExtResource("5_8xlja")
+start_beat = 1584
+length = 1
+pitch = 2
+text = " po"
+
+[sub_resource type="Resource" id="Resource_0wtto"]
+script = ExtResource("5_8xlja")
+start_beat = 1586
+length = 1
+pitch = -1
+text = "e"
+
+[sub_resource type="Resource" id="Resource_kd0e5"]
+script = ExtResource("5_8xlja")
+start_beat = 1590
+length = 3
+pitch = -1
+text = "try"
+
+[sub_resource type="Resource" id="Resource_g37c2"]
+script = ExtResource("4_ahm73")
+notes = Array[ExtResource("5_8xlja")]([SubResource("Resource_t41kq"), SubResource("Resource_egujy"), SubResource("Resource_7jng5"), SubResource("Resource_7sc3m"), SubResource("Resource_xs35u"), SubResource("Resource_0wtto"), SubResource("Resource_kd0e5")])
+start_beat = 1565
+end_beat = 1598
+
+[sub_resource type="Resource" id="Resource_dmlwc"]
+script = ExtResource("5_8xlja")
+start_beat = 1600
+length = 7
+pitch = 13
+text = "Yum"
+
+[sub_resource type="Resource" id="Resource_ibo7p"]
+script = ExtResource("5_8xlja")
+start_beat = 1608
+length = 3
+pitch = 11
+text = "my"
+
+[sub_resource type="Resource" id="Resource_6wu14"]
+script = ExtResource("5_8xlja")
+start_beat = 1612
+length = 3
+pitch = 9
+text = "~"
+
+[sub_resource type="Resource" id="Resource_jil0p"]
+script = ExtResource("5_8xlja")
+start_beat = 1616
+length = 4
+pitch = 11
+text = " Cakes!"
+
+[sub_resource type="Resource" id="Resource_m0cu4"]
+script = ExtResource("5_8xlja")
+start_beat = 1621
+length = 4
+pitch = 13
+text = "~"
+
+[sub_resource type="Resource" id="Resource_3i5or"]
+script = ExtResource("4_ahm73")
+notes = Array[ExtResource("5_8xlja")]([SubResource("Resource_dmlwc"), SubResource("Resource_ibo7p"), SubResource("Resource_6wu14"), SubResource("Resource_jil0p"), SubResource("Resource_m0cu4")])
+start_beat = 1598
+end_beat = 1630
+
+[sub_resource type="Resource" id="Resource_do214"]
+script = ExtResource("5_8xlja")
+start_beat = 1632
+length = 3
+pitch = 11
+text = "Come"
+
+[sub_resource type="Resource" id="Resource_q52k5"]
+script = ExtResource("5_8xlja")
+start_beat = 1636
+length = 2
+pitch = 6
+text = " on"
+
+[sub_resource type="Resource" id="Resource_rlp27"]
+script = ExtResource("5_8xlja")
+start_beat = 1640
+length = 3
+pitch = 4
+text = " peo"
+
+[sub_resource type="Resource" id="Resource_kkdxo"]
+script = ExtResource("5_8xlja")
+start_beat = 1644
+length = 3
+pitch = 2
+text = "ple"
+
+[sub_resource type="Resource" id="Resource_6ix1m"]
+script = ExtResource("5_8xlja")
+start_beat = 1648
+length = 3
+pitch = 4
+text = " dance"
+
+[sub_resource type="Resource" id="Resource_fbift"]
+script = ExtResource("5_8xlja")
+start_beat = 1652
+length = 3
+pitch = 6
+text = " with"
+
+[sub_resource type="Resource" id="Resource_l1bbu"]
+script = ExtResource("5_8xlja")
+start_beat = 1656
+length = 4
+pitch = 2
+text = " me"
+
+[sub_resource type="Resource" id="Resource_rdxc7"]
+script = ExtResource("4_ahm73")
+notes = Array[ExtResource("5_8xlja")]([SubResource("Resource_do214"), SubResource("Resource_q52k5"), SubResource("Resource_rlp27"), SubResource("Resource_kkdxo"), SubResource("Resource_6ix1m"), SubResource("Resource_fbift"), SubResource("Resource_l1bbu")])
+start_beat = 1630
+end_beat = 1663
+
+[sub_resource type="Resource" id="Resource_qp83h"]
+script = ExtResource("5_8xlja")
+start_beat = 1664
+length = 7
+pitch = 14
+text = "Yum"
+
+[sub_resource type="Resource" id="Resource_m6gt1"]
+script = ExtResource("5_8xlja")
+start_beat = 1672
+length = 3
+pitch = 13
+text = "my"
+
+[sub_resource type="Resource" id="Resource_jm4yt"]
+script = ExtResource("5_8xlja")
+start_beat = 1676
+length = 3
+pitch = 11
+text = "~"
+
+[sub_resource type="Resource" id="Resource_simr0"]
+script = ExtResource("5_8xlja")
+start_beat = 1680
+length = 4
+pitch = 13
+text = " Cakes!"
+
+[sub_resource type="Resource" id="Resource_x1i58"]
+script = ExtResource("5_8xlja")
+start_beat = 1685
+length = 4
+pitch = 14
+text = "~"
+
+[sub_resource type="Resource" id="Resource_ikq1c"]
+script = ExtResource("4_ahm73")
+notes = Array[ExtResource("5_8xlja")]([SubResource("Resource_qp83h"), SubResource("Resource_m6gt1"), SubResource("Resource_jm4yt"), SubResource("Resource_simr0"), SubResource("Resource_x1i58")])
+start_beat = 1663
+end_beat = 1693
+
+[sub_resource type="Resource" id="Resource_363qx"]
+script = ExtResource("5_8xlja")
+start_beat = 1696
+length = 2
+pitch = 4
+text = "Tas"
+
+[sub_resource type="Resource" id="Resource_r46j2"]
+script = ExtResource("5_8xlja")
+start_beat = 1700
+length = 3
+pitch = 2
+text = "tie"
+
+[sub_resource type="Resource" id="Resource_4fj1w"]
+script = ExtResource("5_8xlja")
+start_beat = 1704
+length = 2
+pitch = 4
+text = "r"
+
+[sub_resource type="Resource" id="Resource_2d11d"]
+script = ExtResource("5_8xlja")
+start_beat = 1707
+length = 3
+pitch = 6
+text = " than"
+
+[sub_resource type="Resource" id="Resource_8gica"]
+script = ExtResource("5_8xlja")
+start_beat = 1712
+length = 1
+pitch = 2
+text = " nor"
+
+[sub_resource type="Resource" id="Resource_qnew7"]
+script = ExtResource("5_8xlja")
+start_beat = 1714
+length = 1
+pitch = -1
+text = "mal"
+
+[sub_resource type="Resource" id="Resource_220ry"]
+script = ExtResource("5_8xlja")
+start_beat = 1718
+length = 4
+pitch = -1
+text = " food"
+
+[sub_resource type="Resource" id="Resource_1dopx"]
+script = ExtResource("4_ahm73")
+notes = Array[ExtResource("5_8xlja")]([SubResource("Resource_363qx"), SubResource("Resource_r46j2"), SubResource("Resource_4fj1w"), SubResource("Resource_2d11d"), SubResource("Resource_8gica"), SubResource("Resource_qnew7"), SubResource("Resource_220ry")])
+start_beat = 1693
+end_beat = 1725
+
+[sub_resource type="Resource" id="Resource_qcuii"]
+script = ExtResource("5_8xlja")
+start_beat = 1728
+length = 7
+pitch = 13
+text = "Yum"
+
+[sub_resource type="Resource" id="Resource_vpylq"]
+script = ExtResource("5_8xlja")
+start_beat = 1736
+length = 3
+pitch = 11
+text = "my"
+
+[sub_resource type="Resource" id="Resource_1unyu"]
+script = ExtResource("5_8xlja")
+start_beat = 1740
+length = 3
+pitch = 9
+text = "~"
+
+[sub_resource type="Resource" id="Resource_iu3sn"]
+script = ExtResource("5_8xlja")
+start_beat = 1744
+length = 4
+pitch = 11
+text = " Cakes!"
+
+[sub_resource type="Resource" id="Resource_5mt5f"]
+script = ExtResource("5_8xlja")
+start_beat = 1749
+length = 4
+pitch = 13
+text = "~"
+
+[sub_resource type="Resource" id="Resource_hxdrn"]
+script = ExtResource("4_ahm73")
+notes = Array[ExtResource("5_8xlja")]([SubResource("Resource_qcuii"), SubResource("Resource_vpylq"), SubResource("Resource_1unyu"), SubResource("Resource_iu3sn"), SubResource("Resource_5mt5f")])
+start_beat = 1725
+end_beat = 1755
+
+[sub_resource type="Resource" id="Resource_kx56h"]
+script = ExtResource("5_8xlja")
+start_beat = 1758
+length = 1
+pitch = 4
+text = "De"
+
+[sub_resource type="Resource" id="Resource_ipwc7"]
+script = ExtResource("5_8xlja")
+start_beat = 1759
+length = 1
+pitch = 11
+text = "li"
+
+[sub_resource type="Resource" id="Resource_b4vxr"]
+script = ExtResource("5_8xlja")
+start_beat = 1763
+length = 1
+pitch = 6
+text = "cious"
+
+[sub_resource type="Resource" id="Resource_u48t4"]
+script = ExtResource("5_8xlja")
+start_beat = 1767
+length = 3
+pitch = 4
+text = " fresh"
+
+[sub_resource type="Resource" id="Resource_0orun"]
+script = ExtResource("5_8xlja")
+start_beat = 1775
+length = 3
+pitch = 4
+text = " baked"
+
+[sub_resource type="Resource" id="Resource_77m0g"]
+script = ExtResource("5_8xlja")
+type = 1
+start_beat = 1783
+length = 1
+pitch = 6
+text = " good"
+
+[sub_resource type="Resource" id="Resource_gosis"]
+script = ExtResource("5_8xlja")
+type = 1
+start_beat = 1785
+length = 1
+pitch = 4
+text = "~"
+
+[sub_resource type="Resource" id="Resource_78l4r"]
+script = ExtResource("5_8xlja")
+type = 1
+start_beat = 1787
+length = 4
+pitch = 6
+text = "~"
+
+[sub_resource type="Resource" id="Resource_qujjh"]
+script = ExtResource("4_ahm73")
+notes = Array[ExtResource("5_8xlja")]([SubResource("Resource_kx56h"), SubResource("Resource_ipwc7"), SubResource("Resource_b4vxr"), SubResource("Resource_u48t4"), SubResource("Resource_0orun"), SubResource("Resource_77m0g"), SubResource("Resource_gosis"), SubResource("Resource_78l4r")])
+start_beat = 1755
+end_beat = 1791
+
+[sub_resource type="Resource" id="Resource_1n16n"]
+script = ExtResource("5_8xlja")
+type = 1
+start_beat = 1792
+length = 7
+pitch = 14
+text = "Yum"
+
+[sub_resource type="Resource" id="Resource_i3byx"]
+script = ExtResource("5_8xlja")
+type = 1
+start_beat = 1800
+length = 3
+pitch = 13
+text = "my"
+
+[sub_resource type="Resource" id="Resource_ynntq"]
+script = ExtResource("5_8xlja")
+type = 1
+start_beat = 1804
+length = 3
+pitch = 11
+text = "~"
+
+[sub_resource type="Resource" id="Resource_nt33f"]
+script = ExtResource("5_8xlja")
+type = 1
+start_beat = 1808
+length = 4
+pitch = 13
+text = " Cakes!"
+
+[sub_resource type="Resource" id="Resource_gvbkj"]
+script = ExtResource("5_8xlja")
+type = 1
+start_beat = 1813
+length = 4
+pitch = 14
+text = "~  "
+
+[sub_resource type="Resource" id="Resource_2tj5h"]
+script = ExtResource("4_ahm73")
+notes = Array[ExtResource("5_8xlja")]([SubResource("Resource_1n16n"), SubResource("Resource_i3byx"), SubResource("Resource_ynntq"), SubResource("Resource_nt33f"), SubResource("Resource_gvbkj")])
+start_beat = 1791
+end_beat = 1821
+
+[sub_resource type="Resource" id="Resource_dywtl"]
+script = ExtResource("5_8xlja")
+start_beat = 1824
+length = 2
+pitch = 11
+text = "Makes"
+
+[sub_resource type="Resource" id="Resource_wyiuv"]
+script = ExtResource("5_8xlja")
+start_beat = 1829
+length = 1
+pitch = 9
+text = " you"
+
+[sub_resource type="Resource" id="Resource_1awbn"]
+script = ExtResource("5_8xlja")
+start_beat = 1832
+length = 2
+pitch = 11
+text = " feel"
+
+[sub_resource type="Resource" id="Resource_e2xnv"]
+script = ExtResource("5_8xlja")
+start_beat = 1836
+length = 2
+pitch = 9
+text = " like"
+
+[sub_resource type="Resource" id="Resource_nq6i0"]
+script = ExtResource("5_8xlja")
+start_beat = 1840
+length = 2
+pitch = 11
+text = " po"
+
+[sub_resource type="Resource" id="Resource_4upee"]
+script = ExtResource("5_8xlja")
+start_beat = 1843
+length = 1
+pitch = 9
+text = "e"
+
+[sub_resource type="Resource" id="Resource_sskvf"]
+script = ExtResource("5_8xlja")
+start_beat = 1846
+length = 6
+pitch = 14
+text = "try"
+
+[sub_resource type="Resource" id="Resource_lfgqh"]
+script = ExtResource("4_ahm73")
+notes = Array[ExtResource("5_8xlja")]([SubResource("Resource_dywtl"), SubResource("Resource_wyiuv"), SubResource("Resource_1awbn"), SubResource("Resource_e2xnv"), SubResource("Resource_nq6i0"), SubResource("Resource_4upee"), SubResource("Resource_sskvf")])
+start_beat = 1821
+end_beat = 1854
+
+[sub_resource type="Resource" id="Resource_f30pd"]
+script = ExtResource("5_8xlja")
+start_beat = 1856
+length = 7
+pitch = 13
+text = "Yum"
+
+[sub_resource type="Resource" id="Resource_ge0j6"]
+script = ExtResource("5_8xlja")
+start_beat = 1864
+length = 3
+pitch = 11
+text = "my"
+
+[sub_resource type="Resource" id="Resource_48ysw"]
+script = ExtResource("5_8xlja")
+start_beat = 1868
+length = 3
+pitch = 9
+text = "~"
+
+[sub_resource type="Resource" id="Resource_ggjbg"]
+script = ExtResource("5_8xlja")
+start_beat = 1872
+length = 4
+pitch = 11
+text = " Cakes!"
+
+[sub_resource type="Resource" id="Resource_b3838"]
+script = ExtResource("5_8xlja")
+start_beat = 1877
+length = 4
+pitch = 13
+text = "~"
+
+[sub_resource type="Resource" id="Resource_htg5c"]
+script = ExtResource("4_ahm73")
+notes = Array[ExtResource("5_8xlja")]([SubResource("Resource_f30pd"), SubResource("Resource_ge0j6"), SubResource("Resource_48ysw"), SubResource("Resource_ggjbg"), SubResource("Resource_b3838")])
+start_beat = 1854
+end_beat = 1886
+
+[sub_resource type="Resource" id="Resource_d88pa"]
+script = ExtResource("5_8xlja")
+start_beat = 1888
+length = 3
+pitch = 11
+text = "Come"
+
+[sub_resource type="Resource" id="Resource_msid1"]
+script = ExtResource("5_8xlja")
+start_beat = 1892
+length = 2
+pitch = 6
+text = " on"
+
+[sub_resource type="Resource" id="Resource_rwo87"]
+script = ExtResource("5_8xlja")
+start_beat = 1896
+length = 3
+pitch = 4
+text = " peo"
+
+[sub_resource type="Resource" id="Resource_fepg1"]
+script = ExtResource("5_8xlja")
+start_beat = 1900
+length = 3
+pitch = 2
+text = "ple"
+
+[sub_resource type="Resource" id="Resource_0vqmi"]
+script = ExtResource("5_8xlja")
+start_beat = 1904
+length = 3
+pitch = 4
+text = " dance"
+
+[sub_resource type="Resource" id="Resource_utrfa"]
+script = ExtResource("5_8xlja")
+start_beat = 1908
+length = 3
+pitch = 2
+text = " with"
+
+[sub_resource type="Resource" id="Resource_tphbw"]
+script = ExtResource("5_8xlja")
+start_beat = 1912
+length = 1
+pitch = 6
+text = " me"
+
+[sub_resource type="Resource" id="Resource_ccbq2"]
+script = ExtResource("5_8xlja")
+start_beat = 1914
+length = 1
+pitch = 4
+text = "~"
+
+[sub_resource type="Resource" id="Resource_eg3ts"]
+script = ExtResource("5_8xlja")
+start_beat = 1916
+length = 3
+pitch = 6
+text = "~"
+
+[sub_resource type="Resource" id="Resource_7mvl4"]
+script = ExtResource("4_ahm73")
+notes = Array[ExtResource("5_8xlja")]([SubResource("Resource_d88pa"), SubResource("Resource_msid1"), SubResource("Resource_rwo87"), SubResource("Resource_fepg1"), SubResource("Resource_0vqmi"), SubResource("Resource_utrfa"), SubResource("Resource_tphbw"), SubResource("Resource_ccbq2"), SubResource("Resource_eg3ts")])
+start_beat = 1886
+end_beat = 1919
+
+[sub_resource type="Resource" id="Resource_2mixj"]
+script = ExtResource("5_8xlja")
+start_beat = 1920
+length = 7
+pitch = 14
+text = "Yum"
+
+[sub_resource type="Resource" id="Resource_bhivn"]
+script = ExtResource("5_8xlja")
+start_beat = 1928
+length = 3
+pitch = 13
+text = "my"
+
+[sub_resource type="Resource" id="Resource_hcwjr"]
+script = ExtResource("5_8xlja")
+start_beat = 1932
+length = 3
+pitch = 11
+text = "~"
+
+[sub_resource type="Resource" id="Resource_qwyqk"]
+script = ExtResource("5_8xlja")
+start_beat = 1936
+length = 4
+pitch = 13
+text = " Cakes!"
+
+[sub_resource type="Resource" id="Resource_ghwnp"]
+script = ExtResource("5_8xlja")
+start_beat = 1941
+length = 4
+pitch = 14
+text = "~"
+
+[sub_resource type="Resource" id="Resource_x2h1x"]
+script = ExtResource("4_ahm73")
+notes = Array[ExtResource("5_8xlja")]([SubResource("Resource_2mixj"), SubResource("Resource_bhivn"), SubResource("Resource_hcwjr"), SubResource("Resource_qwyqk"), SubResource("Resource_ghwnp")])
+start_beat = 1919
+end_beat = 1949
+
+[sub_resource type="Resource" id="Resource_apv8p"]
+script = ExtResource("5_8xlja")
+start_beat = 1952
+length = 3
+pitch = 11
+text = "Tas"
+
+[sub_resource type="Resource" id="Resource_v0dtm"]
+script = ExtResource("5_8xlja")
+start_beat = 1956
+length = 3
+pitch = 9
+text = "tie"
+
+[sub_resource type="Resource" id="Resource_egi0r"]
+script = ExtResource("5_8xlja")
+start_beat = 1960
+length = 3
+pitch = 11
+text = "r"
+
+[sub_resource type="Resource" id="Resource_xpewa"]
+script = ExtResource("5_8xlja")
+start_beat = 1964
+length = 2
+pitch = 9
+text = " than"
+
+[sub_resource type="Resource" id="Resource_iobs1"]
+script = ExtResource("5_8xlja")
+start_beat = 1968
+length = 2
+pitch = 11
+text = " nor"
+
+[sub_resource type="Resource" id="Resource_y7dxk"]
+script = ExtResource("5_8xlja")
+start_beat = 1971
+length = 1
+pitch = 9
+text = "mal"
+
+[sub_resource type="Resource" id="Resource_rx7eo"]
+script = ExtResource("5_8xlja")
+start_beat = 1976
+length = 2
+pitch = 13
+text = " food"
+
+[sub_resource type="Resource" id="Resource_vybdw"]
+script = ExtResource("5_8xlja")
+start_beat = 1979
+length = 3
+pitch = 14
+text = "~"
+
+[sub_resource type="Resource" id="Resource_77f1n"]
+script = ExtResource("4_ahm73")
+notes = Array[ExtResource("5_8xlja")]([SubResource("Resource_apv8p"), SubResource("Resource_v0dtm"), SubResource("Resource_egi0r"), SubResource("Resource_xpewa"), SubResource("Resource_iobs1"), SubResource("Resource_y7dxk"), SubResource("Resource_rx7eo"), SubResource("Resource_vybdw")])
+start_beat = 1949
+end_beat = 1983
+
+[sub_resource type="Resource" id="Resource_14hbn"]
+script = ExtResource("5_8xlja")
+start_beat = 1984
+length = 7
+pitch = 13
+text = "Yum"
+
+[sub_resource type="Resource" id="Resource_gjnwe"]
+script = ExtResource("5_8xlja")
+start_beat = 1992
+length = 3
+pitch = 11
+text = "my"
+
+[sub_resource type="Resource" id="Resource_hsweo"]
+script = ExtResource("5_8xlja")
+start_beat = 1996
+length = 3
+pitch = 9
+text = "~"
+
+[sub_resource type="Resource" id="Resource_erubu"]
+script = ExtResource("5_8xlja")
+start_beat = 2000
+length = 4
+pitch = 11
+text = " Cakes!"
+
+[sub_resource type="Resource" id="Resource_564eg"]
+script = ExtResource("5_8xlja")
+start_beat = 2005
+length = 4
+pitch = 13
+text = "~"
+
+[sub_resource type="Resource" id="Resource_s354j"]
+script = ExtResource("4_ahm73")
+notes = Array[ExtResource("5_8xlja")]([SubResource("Resource_14hbn"), SubResource("Resource_gjnwe"), SubResource("Resource_hsweo"), SubResource("Resource_erubu"), SubResource("Resource_564eg")])
+start_beat = 1983
+end_beat = 2011
+
+[sub_resource type="Resource" id="Resource_ctyi3"]
+script = ExtResource("5_8xlja")
+start_beat = 2014
+length = 1
+pitch = 2
+text = "De"
+
+[sub_resource type="Resource" id="Resource_p4dwa"]
+script = ExtResource("5_8xlja")
+start_beat = 2015
+length = 1
+pitch = 4
+text = "li"
+
+[sub_resource type="Resource" id="Resource_y40oa"]
+script = ExtResource("5_8xlja")
+start_beat = 2019
+length = 1
+pitch = 2
+text = "cious"
+
+[sub_resource type="Resource" id="Resource_nxegq"]
+script = ExtResource("5_8xlja")
+start_beat = 2023
+length = 3
+pitch = 6
+text = " fresh"
+
+[sub_resource type="Resource" id="Resource_teqqk"]
+script = ExtResource("5_8xlja")
+start_beat = 2031
+length = 3
+pitch = 2
+text = " baked"
+
+[sub_resource type="Resource" id="Resource_fdvg6"]
+script = ExtResource("5_8xlja")
+type = 1
+start_beat = 2039
+length = 3
+pitch = -1
+text = " good"
+
+[sub_resource type="Resource" id="Resource_o2r6m"]
+script = ExtResource("4_ahm73")
+notes = Array[ExtResource("5_8xlja")]([SubResource("Resource_ctyi3"), SubResource("Resource_p4dwa"), SubResource("Resource_y40oa"), SubResource("Resource_nxegq"), SubResource("Resource_teqqk"), SubResource("Resource_fdvg6")])
+start_beat = 2011
+
+[sub_resource type="Resource" id="Resource_pjxbu"]
+script = ExtResource("3_4h1ab")
+phrases = Array[ExtResource("4_ahm73")]([SubResource("Resource_241oj"), SubResource("Resource_c1f7e"), SubResource("Resource_7lsgr"), SubResource("Resource_if500"), SubResource("Resource_ynvhh"), SubResource("Resource_vd4rg"), SubResource("Resource_8swg6"), SubResource("Resource_jexhi"), SubResource("Resource_dmud1"), SubResource("Resource_5ouax"), SubResource("Resource_pa8qu"), SubResource("Resource_8v8li"), SubResource("Resource_2jd5v"), SubResource("Resource_ttxjs"), SubResource("Resource_jqrjy"), SubResource("Resource_sqgq6"), SubResource("Resource_i2vc7"), SubResource("Resource_qe7bb"), SubResource("Resource_atg6q"), SubResource("Resource_20imm"), SubResource("Resource_581hk"), SubResource("Resource_26v0v"), SubResource("Resource_1t1o2"), SubResource("Resource_xjj78"), SubResource("Resource_rn0m7"), SubResource("Resource_iysrf"), SubResource("Resource_i3nge"), SubResource("Resource_frk78"), SubResource("Resource_barer"), SubResource("Resource_oppwn"), SubResource("Resource_tktsn"), SubResource("Resource_0ptd7"), SubResource("Resource_jpkym"), SubResource("Resource_vj8a0"), SubResource("Resource_ur3pk"), SubResource("Resource_mhekv"), SubResource("Resource_fosef"), SubResource("Resource_86qrf"), SubResource("Resource_3fwha"), SubResource("Resource_qeii5"), SubResource("Resource_3enab"), SubResource("Resource_1m8ep"), SubResource("Resource_g37c2"), SubResource("Resource_3i5or"), SubResource("Resource_rdxc7"), SubResource("Resource_ikq1c"), SubResource("Resource_1dopx"), SubResource("Resource_hxdrn"), SubResource("Resource_qujjh"), SubResource("Resource_2tj5h"), SubResource("Resource_lfgqh"), SubResource("Resource_htg5c"), SubResource("Resource_7mvl4"), SubResource("Resource_x2h1x"), SubResource("Resource_77f1n"), SubResource("Resource_s354j"), SubResource("Resource_o2r6m")])
+
+[sub_resource type="Resource" id="Resource_o0dv4"]
+script = ExtResource("2_1ppoa")
+title = "YummyPoetry"
+artist = "GaryCXJk"
+audio = "GaryCXJk - YummyPoetry.mp3"
+bpm = 280.0
+gap = 34395
+language = Array[String](["English"])
+singers = Array[ExtResource("3_4h1ab")]([SubResource("Resource_pjxbu")])
+raw = Dictionary[String, String]({
+"ARTIST": "GaryCXJk",
+"AUDIO": "GaryCXJk - YummyPoetry.mp3",
+"BPM": "280",
+"CREATOR": "GaryCXJk",
+"GAP": "34395",
+"LANGUAGE": "English",
+"TITLE": "YummyPoetry",
+"VIDEOGAP": "0",
+"YEAR": "2005"
+})
+
+[node name="Simple" type="Node2D"]
+
+[node name="LyricPlayer" type="Node" parent="." node_paths=PackedStringArray("player")]
+script = ExtResource("1_3g1vi")
+song_source = "#TITLE:YummyPoetry
+#ARTIST:GaryCXJk
+#LANGUAGE:English
+#YEAR:2005
+#CREATOR:GaryCXJk
+#AUDIO:GaryCXJk - YummyPoetry.mp3
+#VIDEOGAP:0
+#BPM:280
+#GAP:34395
+R 0 2 2 Yum
+R 3 2 2 my
+R 8 3 2  Cakes!
+R 16 3 2  Yum
+R 20 2 2 my
+R 24 3 2  Cakes!
+- 29
+R 32 2 2 Eat
+R 35 2 2  it
+R 40 3 2  like
+R 44 2 2  your
+R 47 3 2  life's
+R 52 1 2  at
+R 56 3 2  stake
+- 62
+R 64 2 2 Just
+R 69 2 2  eat
+R 72 2 2  it
+R 77 2 2  through
+R 80 3 2  your
+R 84 2 2  lunch
+R 88 3 2  break
+- 94
+R 96 2 2 It
+R 99 2 2  is
+R 103 3 2  yum
+R 107 3 2 my
+R 112 1 2  it's
+R 116 2 2  not
+R 120 3 2  fake
+- 126
+R 128 2 2 Yum
+R 131 2 2 my
+R 136 3 2  Cakes
+R 144 2 2  taste
+R 148 3 2  so
+R 153 3 2  good
+- 158
+R 160 3 2 Please
+R 164 3 2  don't
+R 168 2 2  ask
+R 172 3 2  me
+R 176 3 2  why
+R 180 2 2  you
+R 185 3 2  should
+- 189
+R 191 3 2 Eat
+R 195 2 2  it
+R 199 3 2  like
+R 204 2 2  your
+R 208 2 2  dai
+R 212 1 2 ly
+R 217 4 2  food
+- 222
+R 224 2 2 Yum
+R 227 2 2 my
+R 232 3 2  Cakes,
+R 240 3 2  eat
+R 244 2 2  it
+R 248 7 2  dude!
+- 255
+* 256 7 14 Yum
+* 264 3 13 my
+* 268 3 11 ~
+* 272 4 13  Cakes!
+* 277 4 14 ~  
+- 285
+: 288 2 4 Makes
+: 293 1 4  you
+: 296 2 4  feel
+: 299 2 6  like
+: 304 1 2  po
+: 306 1 -1 e
+: 310 3 -1 try
+- 318
+: 320 7 13 Yum
+: 328 3 11 my
+: 332 3 9 ~
+: 336 4 11  Cakes!
+: 341 4 13 ~
+- 350
+: 352 3 11 Come
+: 356 2 6  on
+: 360 3 4  peo
+: 364 3 2 ple
+: 368 3 4  dance
+: 372 3 2  with
+: 376 1 6  me
+: 378 1 4 ~
+: 380 3 6 ~
+- 383
+: 384 7 14 Yum
+: 392 3 13 my
+: 396 3 11 ~
+: 400 4 13  Cakes!
+: 405 4 14 ~
+- 413
+: 416 2 4 Tas
+: 420 3 2 tie
+: 424 2 4 r
+: 427 3 6  than
+: 432 1 2  nor
+: 434 1 -1 mal
+: 438 4 -1  food
+- 445
+: 448 7 13 Yum
+: 456 3 11 my
+: 460 3 9 ~
+: 464 4 11  Cakes!
+: 469 4 13 ~
+- 475
+: 478 1 4 De
+: 479 1 11 li
+: 483 1 6 cious
+: 487 3 4  fresh
+: 495 3 4  baked
+* 503 1 6  good
+* 505 1 4 ~
+* 507 4 6 ~
+- 520
+R 768 3 2 It
+R 772 2 2  is
+R 776 3 2  yum
+R 780 2 2 my
+R 784 3 2  for
+R 788 2 2  your
+R 792 4 2  fat
+R 797 2 2 her
+- 799
+R 800 3 2 It
+R 804 2 2  is
+R 808 2 2  yum
+R 811 2 2 my
+R 816 3 2  for
+R 820 2 2  your
+R 824 3 2  mot
+R 828 2 2 her
+- 831
+R 832 2 2 It
+R 835 2 2  is
+R 839 3 2  yum
+R 843 2 2 my
+R 848 2 2  for
+R 851 3 2  your
+R 856 3 2  brot
+R 860 2 2 her
+- 863
+R 864 3 2 E
+R 868 2 2 ven
+R 872 2 2  yum
+R 875 2 2 my
+R 880 2 2  for
+R 883 2 2  your
+R 887 3 2  sis
+R 892 2 2 ter
+- 895
+R 896 7 14 Yum
+R 904 3 13 my
+R 908 3 11 ~
+- 911
+R 912 2 2 Taste
+R 916 3 2  so
+R 920 4 2  good
+- 926
+R 928 3 2 Please
+R 932 3 2  don't
+R 936 2 2  ask
+R 939 3 2  me
+R 943 4 2  why
+R 948 2 2  you
+R 953 4 2  should
+- 957
+R 960 2 2 Eat
+R 963 2 2  it
+R 967 3 2  like
+R 972 2 2  your
+R 976 2 2  favo
+R 979 2 2 rite
+R 985 4 2  food
+- 990
+R 992 3 2 Yum
+R 996 2 2 my
+R 1000 3 2  Cakes,
+R 1008 3 2  eat
+R 1012 2 2  it
+R 1016 6 2  dude!
+- 1023
+* 1024 7 14 Yum
+* 1032 3 13 my
+* 1036 3 11 ~
+* 1040 4 13  Cakes!
+* 1045 4 14 ~  
+- 1053
+: 1056 2 4 Makes
+: 1061 1 4  you
+: 1064 2 4  feel
+: 1067 2 6  like
+: 1072 1 2  po
+: 1074 1 -1 e
+: 1078 3 -1 try
+- 1086
+: 1088 7 13 Yum
+: 1096 3 11 my
+: 1100 3 9 ~
+: 1104 4 11  Cakes!
+: 1109 4 13 ~
+- 1118
+: 1120 3 11 Come
+: 1124 2 6  on
+: 1128 3 4  peo
+: 1132 3 2 ple
+: 1136 3 4  dance
+: 1140 3 6  with
+: 1144 3 2  me
+- 1151
+: 1152 7 14 Yum
+: 1160 3 13 my
+: 1164 3 11 ~
+: 1168 4 13  Cakes!
+: 1173 4 14 ~
+- 1181
+: 1184 2 4 Tas
+: 1188 3 2 tie
+: 1192 2 4 r
+: 1195 3 6  than
+: 1200 1 2  nor
+: 1202 1 -1 mal
+: 1206 4 -1  food
+- 1213
+: 1216 7 13 Yum
+: 1224 3 11 my
+: 1228 3 9 ~
+: 1232 4 11  Cakes!
+: 1237 4 13 ~
+- 1243
+: 1246 1 4 De
+: 1247 1 11 li
+: 1251 1 6 cious
+: 1255 3 4  fresh
+: 1263 3 4  baked
+* 1272 1 6  good
+* 1274 1 4 ~
+* 1276 3 6 ~
+- 1279
+: 1280 7 14 Yum
+: 1288 3 13 my
+: 1292 3 11 ~
+: 1296 4 13  Cakes!
+: 1301 4 14 ~
+- 1309
+F 1313 5 2 So,
+F 1322 2 2  ho
+F 1325 2 2 mie
+F 1328 5 2  boys
+- 1339
+: 1344 7 13 Yum
+: 1352 3 11 my
+: 1356 3 9 ~
+: 1360 4 11  Cakes!
+: 1365 4 13 ~
+- 1372
+F 1375 2 2 If
+F 1379 1 2  you
+F 1381 3 2  want
+F 1386 1 2  to
+F 1388 1 2  be
+F 1393 7 2  cool
+- 1404
+: 1408 7 14 Yum
+: 1416 3 13 my
+: 1420 3 11 ~
+: 1424 4 13  Cakes!
+: 1429 4 15 ~
+- 1437
+F 1441 2 2 Then
+F 1444 4 2  buy
+F 1450 3 2  Yum
+F 1454 1 2 my
+F 1456 3 2  Cakes
+- 1464
+: 1472 7 13 Yum
+: 1480 3 11 my
+: 1484 3 9 ~
+: 1488 4 11  Cakes!
+: 1493 4 13 ~
+- 1499
+R 1500 1 2 And
+R 1502 1 2  for
+R 1504 3 2  one
+R 1508 1 2  last
+R 1512 3 2  time,
+R 1520 3 2  eat
+R 1524 2 2  it
+R 1528 6 2  dude!
+- 1535
+* 1536 7 14 Yum
+* 1544 3 13 my
+* 1548 3 11 ~
+* 1552 4 13  Cakes!
+* 1557 4 14 ~  
+- 1565
+: 1568 2 4 Makes
+: 1572 1 4  you
+: 1575 3 4  feel
+: 1579 2 6  like
+: 1584 1 2  po
+: 1586 1 -1 e
+: 1590 3 -1 try
+- 1598
+: 1600 7 13 Yum
+: 1608 3 11 my
+: 1612 3 9 ~
+: 1616 4 11  Cakes!
+: 1621 4 13 ~
+- 1630
+: 1632 3 11 Come
+: 1636 2 6  on
+: 1640 3 4  peo
+: 1644 3 2 ple
+: 1648 3 4  dance
+: 1652 3 6  with
+: 1656 4 2  me
+- 1663
+: 1664 7 14 Yum
+: 1672 3 13 my
+: 1676 3 11 ~
+: 1680 4 13  Cakes!
+: 1685 4 14 ~
+- 1693
+: 1696 2 4 Tas
+: 1700 3 2 tie
+: 1704 2 4 r
+: 1707 3 6  than
+: 1712 1 2  nor
+: 1714 1 -1 mal
+: 1718 4 -1  food
+- 1725
+: 1728 7 13 Yum
+: 1736 3 11 my
+: 1740 3 9 ~
+: 1744 4 11  Cakes!
+: 1749 4 13 ~
+- 1755
+: 1758 1 4 De
+: 1759 1 11 li
+: 1763 1 6 cious
+: 1767 3 4  fresh
+: 1775 3 4  baked
+* 1783 1 6  good
+* 1785 1 4 ~
+* 1787 4 6 ~
+- 1791
+* 1792 7 14 Yum
+* 1800 3 13 my
+* 1804 3 11 ~
+* 1808 4 13  Cakes!
+* 1813 4 14 ~  
+- 1821
+: 1824 2 11 Makes
+: 1829 1 9  you
+: 1832 2 11  feel
+: 1836 2 9  like
+: 1840 2 11  po
+: 1843 1 9 e
+: 1846 6 14 try
+- 1854
+: 1856 7 13 Yum
+: 1864 3 11 my
+: 1868 3 9 ~
+: 1872 4 11  Cakes!
+: 1877 4 13 ~
+- 1886
+: 1888 3 11 Come
+: 1892 2 6  on
+: 1896 3 4  peo
+: 1900 3 2 ple
+: 1904 3 4  dance
+: 1908 3 2  with
+: 1912 1 6  me
+: 1914 1 4 ~
+: 1916 3 6 ~
+- 1919
+: 1920 7 14 Yum
+: 1928 3 13 my
+: 1932 3 11 ~
+: 1936 4 13  Cakes!
+: 1941 4 14 ~
+- 1949
+: 1952 3 11 Tas
+: 1956 3 9 tie
+: 1960 3 11 r
+: 1964 2 9  than
+: 1968 2 11  nor
+: 1971 1 9 mal
+: 1976 2 13  food
+: 1979 3 14 ~
+- 1983
+: 1984 7 13 Yum
+: 1992 3 11 my
+: 1996 3 9 ~
+: 2000 4 11  Cakes!
+: 2005 4 13 ~
+- 2011
+: 2014 1 2 De
+: 2015 1 4 li
+: 2019 1 2 cious
+: 2023 3 6  fresh
+: 2031 3 2  baked
+* 2039 3 -1  good
+E
+"
+song = SubResource("Resource_o0dv4")
+player = NodePath("../SongAudio")
+metadata/_custom_type_script = "uid://bq6ikjoaame8f"
+
+[node name="SongAudio" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_nqhq8")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+follow_viewport_enabled = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="LyricLine" type="Control" parent="CanvasLayer/VBoxContainer" node_paths=PackedStringArray("lyric_player")]
+layout_mode = 2
+size_flags_vertical = 3
+script = ExtResource("5_4fona")
+lyric_player = NodePath("../../../LyricPlayer")
+outline_size = 10
+font_size = 32
+default_font = ExtResource("4_vecmj")
+highlight_color = Color(1, 1, 0.49803922, 1)
+marked_color = Color(1, 0.49803922, 0.24705882, 1)
+highlight_outline = Color(0.24705882, 0.24705882, 0.12156863, 1)
+marked_outline = Color(0.24705882, 0.12156863, 0.05882353, 1)
+metadata/_custom_type_script = "uid://ctf58rjrgrepb"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Seeker" type="HSlider" parent="CanvasLayer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+step = 0.001
+script = ExtResource("3_3g1vi")
+
+[node name="Time" type="Label" parent="CanvasLayer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "0:00"
+
+[node name="PlayPause" type="Button" parent="CanvasLayer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+
+[connection signal="drag_ended" from="CanvasLayer/VBoxContainer/HBoxContainer/Seeker" to="CanvasLayer/VBoxContainer/HBoxContainer/Seeker" method="_on_drag_ended"]
+[connection signal="drag_started" from="CanvasLayer/VBoxContainer/HBoxContainer/Seeker" to="CanvasLayer/VBoxContainer/HBoxContainer/Seeker" method="_on_drag_started"]
+[connection signal="value_changed" from="CanvasLayer/VBoxContainer/HBoxContainer/Seeker" to="LyricPlayer" method="_on_seeker_value_changed"]
+[connection signal="pressed" from="CanvasLayer/VBoxContainer/HBoxContainer/PlayPause" to="CanvasLayer/VBoxContainer/HBoxContainer/Seeker" method="_on_play_pause_pressed"]

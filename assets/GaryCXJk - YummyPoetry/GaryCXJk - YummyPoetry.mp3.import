@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dbr56x65pxmpv"
+path="res://.godot/imported/GaryCXJk - YummyPoetry.mp3-44fdd20deaff75445fd0e88af9ae9d94.mp3str"
+
+[deps]
+
+source_file="res://assets/GaryCXJk - YummyPoetry/GaryCXJk - YummyPoetry.mp3"
+dest_files=["res://.godot/imported/GaryCXJk - YummyPoetry.mp3-44fdd20deaff75445fd0e88af9ae9d94.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

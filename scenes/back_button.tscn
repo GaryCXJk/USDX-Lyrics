@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://dlbsuqr33f21a"]
+
+[ext_resource type="Script" uid="uid://cgawsiimfpty" path="res://scenes/back_button.gd" id="1_mki26"]
+
+[node name="BackButton" type="Button"]
+offset_right = 45.0
+offset_bottom = 31.0
+text = "Back"
+script = ExtResource("1_mki26")
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]
