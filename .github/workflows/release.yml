@@ -1,0 +1,167 @@
+name: Package and Release Addons
+
+on:
+  workflow_dispatch: {}
+  push:
+    branches: [ main ]
+
+jobs:
+  check-published:
+    name: Check for published release for this version
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Install jq
+        run: |
+          sudo apt-get update -y
+          sudo apt-get install -y jq
+
+      - name: Extract version from plugin.cfg
+        id: version_check
+        run: |
+          set -euo pipefail
+          cfg_path="addons/usdx_lyrics/plugin.cfg"
+          if [[ ! -f "$cfg_path" ]]; then
+            echo "plugin.cfg not found at $cfg_path" >&2
+            exit 1
+          fi
+          version=$(grep -Po '(?<=^version=")[^"]+' "$cfg_path" || true)
+          if [[ -z "$version" ]]; then
+            echo "Failed to read version from $cfg_path" >&2
+            exit 1
+          fi
+          if [[ "$version" == v* ]]; then
+            tag="$version"
+          else
+            tag="v$version"
+          fi
+          echo "version=$version" >> $GITHUB_OUTPUT
+          echo "tag=$tag" >> $GITHUB_OUTPUT
+
+      - name: Fail if a published release exists for tag
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          TAG: ${{ steps.version_check.outputs.tag }}
+        run: |
+          set -euo pipefail
+          repo="$GITHUB_REPOSITORY"
+          api_url="https://api.github.com/repos/$repo"
+          echo "Checking for existing release for tag $TAG"
+          status=$(curl -s -o /tmp/release.json -w "%{http_code}" -H "Authorization: token $GITHUB_TOKEN" -H "Accept: application/vnd.github.v3+json" "$api_url/releases/tags/$TAG")
+          if [[ "$status" == "200" ]]; then
+            draft=$(jq -r '.draft' /tmp/release.json)
+            published_at=$(jq -r '.published_at' /tmp/release.json)
+            if [[ "$draft" == "false" && "$published_at" != "null" ]]; then
+              echo "A published release already exists for $TAG (published_at=$published_at). Failing push to prevent duplicate release." >&2
+              exit 1
+            fi
+            echo "Existing release for $TAG is not published (draft/unpublished). Continuing."
+          else
+            echo "No release found for $TAG (HTTP $status). Continuing."
+          fi
+
+  release:
+    name: Package addons and create release
+    needs: check-published
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Install dependencies
+        run: |
+          sudo apt-get update -y
+          sudo apt-get install -y jq zip
+
+      - name: Extract version from plugin.cfg
+        id: version
+        run: |
+          set -euo pipefail
+          cfg_path="addons/usdx_lyrics/plugin.cfg"
+          if [[ ! -f "$cfg_path" ]]; then
+            echo "plugin.cfg not found at $cfg_path" >&2
+            exit 1
+          fi
+          version=$(grep -Po '(?<=^version=")[^"]+' "$cfg_path" || true)
+          if [[ -z "$version" ]]; then
+            echo "Failed to read version from $cfg_path" >&2
+            exit 1
+          fi
+          if [[ "$version" == v* ]]; then
+            tag="$version"
+          else
+            tag="v$version"
+          fi
+          echo "version=$version" >> $GITHUB_OUTPUT
+          echo "tag=$tag" >> $GITHUB_OUTPUT
+
+      - name: Zip addons folder
+        run: |
+          set -euo pipefail
+          VERSION=${{ steps.version.outputs.version }}
+          zip_name="usdx-lyrics-${VERSION}.zip"
+          rm -f "$zip_name"
+          zip -r "$zip_name" addons
+          ls -lh "$zip_name"
+
+      - name: Create or replace GitHub release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          TAG: ${{ steps.version.outputs.tag }}
+          VERSION: ${{ steps.version.outputs.version }}
+        run: |
+          set -euo pipefail
+          repo="$GITHUB_REPOSITORY"
+          zip_name="usdx-lyrics-${VERSION}.zip"
+
+          echo "Checking for existing release for tag $TAG"
+          api_url="https://api.github.com/repos/$repo"
+
+          # Check for existing release by tag
+          status=$(curl -s -o /tmp/release.json -w "%{http_code}" -H "Authorization: token $GITHUB_TOKEN" -H "Accept: application/vnd.github.v3+json" "$api_url/releases/tags/$TAG")
+
+          if [[ "$status" == "200" ]]; then
+            release_id=$(jq -r '.id' /tmp/release.json)
+            draft=$(jq -r '.draft' /tmp/release.json)
+            published_at=$(jq -r '.published_at' /tmp/release.json)
+            echo "Found release id=$release_id draft=$draft published_at=$published_at"
+            if [[ "$draft" == "false" && "$published_at" != "null" ]]; then
+              echo "Release for $TAG already published; failing to avoid duplicate published release." >&2
+              exit 1
+            fi
+            echo "Deleting existing unpublished/draft release id=$release_id"
+            curl -s -X DELETE -H "Authorization: token $GITHUB_TOKEN" -H "Accept: application/vnd.github.v3+json" "$api_url/releases/$release_id"
+          fi
+
+          # Ensure tag exists locally; if not, create and push it
+          if git rev-parse --verify "$TAG" >/dev/null 2>&1; then
+            echo "Tag $TAG exists locally"
+          else
+            echo "Creating tag $TAG"
+            git config user.name "github-actions[bot]"
+            git config user.email "github-actions[bot]@users.noreply.github.com"
+            git tag -a "$TAG" -m "Release $TAG"
+            git push origin "$TAG"
+          fi
+
+          # Create a new release
+          create_payload=$(jq -n --arg tag "$TAG" --arg name "USDX Lyrics $VERSION" --arg body "Automated release for version $VERSION" '{ tag_name: $tag, name: $name, body: $body, draft: false, prerelease: false }')
+          echo "Creating release for $TAG"
+          resp=$(curl -s -H "Authorization: token $GITHUB_TOKEN" -H "Accept: application/vnd.github.v3+json" -d "$create_payload" "$api_url/releases")
+          upload_url=$(echo "$resp" | jq -r .upload_url | sed -e 's/{?name,label}//')
+          if [[ -z "$upload_url" || "$upload_url" == "null" ]]; then
+            echo "Failed to create release: $resp" >&2
+            exit 1
+          fi
+
+          echo "Uploading asset $zip_name"
+          curl -s -X POST -H "Authorization: token $GITHUB_TOKEN" -H "Content-Type: application/zip" --data-binary @"$zip_name" "$upload_url?name=$zip_name" \
+            | jq -r '.browser_download_url'

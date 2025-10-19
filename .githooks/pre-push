@@ -1,0 +1,75 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+# Client-side pre-push hook: prevents pushing if a published GitHub release exists for the
+# version tag read from addons/usdx_lyrics/plugin.cfg.
+#
+# Usage:
+# - Install by setting git config core.hooksPath .githooks
+# - Provide a GitHub PAT with repo access via env var GITHUB_PAT
+
+repo_root="$(git rev-parse --show-toplevel 2>/dev/null || echo "$(cd "$(dirname "$0")/.." && pwd)")"
+cfg_path="$repo_root/addons/usdx_lyrics/plugin.cfg"
+
+if [[ ! -f "$cfg_path" ]]; then
+  echo "pre-push hook: plugin.cfg not found at $cfg_path" >&2
+  exit 0
+fi
+
+version=$(grep -Po '(?<=^version=")[^"]+' "$cfg_path" || true)
+if [[ -z "$version" ]]; then
+  echo "pre-push hook: failed to read version from $cfg_path" >&2
+  exit 0
+fi
+if [[ "$version" == v* ]]; then
+  tag="$version"
+else
+  tag="v$version"
+fi
+
+# Determine repo owner/name
+remote_url=$(git remote get-url origin 2>/dev/null || true)
+if [[ -z "$remote_url" ]]; then
+  echo "pre-push hook: cannot determine remote 'origin' URL; skipping check" >&2
+  exit 0
+fi
+
+# Normalize remote URL formats: git@github.com:owner/repo.git or https://github.com/owner/repo.git
+if [[ "$remote_url" =~ github.com[:/]+([^/]+)/([^.]+)(\.git)?$ ]]; then
+  owner="${BASH_REMATCH[1]}"
+  repo="${BASH_REMATCH[2]}"
+else
+  echo "pre-push hook: remote origin URL not recognized as GitHub; skipping check" >&2
+  exit 0
+fi
+
+api_url="https://api.github.com/repos/$owner/$repo/releases/tags/$tag"
+
+# Prefer explicit PAT in env var
+token="${GITHUB_PAT:-}"
+if [[ -z "$token" ]]; then
+  # allow git config stored token as fallback
+  token=$(git config --get github.token || true)
+fi
+
+if [[ -z "$token" ]]; then
+  echo "pre-push hook: no GITHUB_PAT environment variable or git config github.token found; skipping remote check" >&2
+  exit 0
+fi
+
+echo "pre-push hook: checking for published release for tag $tag in $owner/$repo"
+status=$(curl -s -o /tmp/prepush_release.json -w "%{http_code}" -H "Authorization: token $token" -H "Accept: application/vnd.github.v3+json" "$api_url") || true
+if [[ "$status" == "200" ]]; then
+  draft=$(jq -r '.draft' /tmp/prepush_release.json 2>/dev/null || echo "false")
+  published_at=$(jq -r '.published_at' /tmp/prepush_release.json 2>/dev/null || echo "null")
+  if [[ "$draft" == "false" && "$published_at" != "null" ]]; then
+    echo "pre-push hook: a published release already exists for $tag (published_at=$published_at). Push aborted to prevent duplicate published release." >&2
+    exit 1
+  else
+    echo "pre-push hook: existing release for $tag is draft/unpublished; push allowed."
+  fi
+else
+  echo "pre-push hook: no release found for $tag (HTTP $status). Push allowed."
+fi
+
+exit 0
