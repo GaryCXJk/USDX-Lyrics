@@ -153,7 +153,35 @@ jobs:
           fi
 
           # Create a new release
-          create_payload=$(jq -n --arg tag "$TAG" --arg name "USDX Lyrics $VERSION" --arg body "Automated release for version $VERSION" '{ tag_name: $tag, name: $name, body: $body, draft: true, prerelease: false }')
+          echo "Determining commits since last published release to include in release notes"
+          # Get the latest published release from GitHub (if any)
+          latest_resp=$(curl -s -H "Authorization: token $GITHUB_TOKEN" -H "Accept: application/vnd.github.v3+json" "$api_url/releases/latest" || true)
+          latest_tag=$(echo "$latest_resp" | jq -r .tag_name 2>/dev/null || true)
+          # Ensure tags are available locally
+          git fetch --tags --prune || true
+          if [[ -z "$latest_tag" || "$latest_tag" == "null" ]]; then
+            echo "No previous published release found; listing all commits"
+            commits=$(git log --pretty=format:'- %h %s (%an)')
+            range_desc="all history"
+          else
+            echo "Latest published release tag: $latest_tag"
+            commits=$(git log "$latest_tag..HEAD" --pretty=format:'- %h %s (%an)')
+            range_desc="$latest_tag..HEAD"
+          fi
+
+          if [[ -z "$commits" ]]; then
+            body="Automated release for version $VERSION\n\nNo changes since last published release ($latest_tag)."
+          else
+            # Include a header and the commit list
+            if [[ -z "$latest_tag" || "$latest_tag" == "null" ]]; then
+              header="Changes (full history):"
+            else
+              header="Changes since $latest_tag:"
+            fi
+            body="Automated release for version $VERSION\n\n$header\n$commits"
+          fi
+
+          create_payload=$(jq -n --arg tag "$TAG" --arg name "USDX Lyrics $VERSION" --arg body "$body" '{ tag_name: $tag, name: $name, body: $body, draft: true, prerelease: false }')
           echo "Creating release for $TAG"
           resp=$(curl -s -H "Authorization: token $GITHUB_TOKEN" -H "Accept: application/vnd.github.v3+json" -d "$create_payload" "$api_url/releases")
           upload_url=$(echo "$resp" | jq -r .upload_url | sed -e 's/{?name,label}//')
