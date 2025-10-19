@@ -9,7 +9,7 @@ class_name Phrase
 var start_sec:float;
 var end_sec:float;
 
-func find_note_index_at(time:int, collapse:String = "~", recent_instead_of_current:bool = false):
+func find_note_index_at(time:float, collapse:String = "~", recent_instead_of_current:bool = false):
 	for note_index in notes.size():
 		var note:Note = notes[note_index]
 		var start_sec:float = note.start_sec
