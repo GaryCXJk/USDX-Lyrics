@@ -45,14 +45,14 @@ jobs:
 
       - name: Fail if a published release exists for tag
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          API_TOKEN: ${{ secrets.RELEASE_TOKEN || secrets.GITHUB_TOKEN }}
           TAG: ${{ steps.version_check.outputs.tag }}
         run: |
           set -euo pipefail
           repo="$GITHUB_REPOSITORY"
           api_url="https://api.github.com/repos/$repo"
           echo "Checking for existing release for tag $TAG"
-          status=$(curl -s -o /tmp/release.json -w "%{http_code}" -H "Authorization: token $GITHUB_TOKEN" -H "Accept: application/vnd.github.v3+json" "$api_url/releases/tags/$TAG")
+          status=$(curl -s -o /tmp/release.json -w "%{http_code}" -H "Authorization: token $API_TOKEN" -H "Accept: application/vnd.github.v3+json" "$api_url/releases/tags/$TAG")
           if [[ "$status" == "200" ]]; then
             draft=$(jq -r '.draft' /tmp/release.json)
             published_at=$(jq -r '.published_at' /tmp/release.json)
@@ -114,7 +114,7 @@ jobs:
 
       - name: Create or replace GitHub release
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          API_TOKEN: ${{ secrets.RELEASE_TOKEN || secrets.GITHUB_TOKEN }}
           TAG: ${{ steps.version.outputs.tag }}
           VERSION: ${{ steps.version.outputs.version }}
         run: |
@@ -126,7 +126,7 @@ jobs:
           api_url="https://api.github.com/repos/$repo"
 
           # Check for existing release by tag
-          status=$(curl -s -o /tmp/release.json -w "%{http_code}" -H "Authorization: token $GITHUB_TOKEN" -H "Accept: application/vnd.github.v3+json" "$api_url/releases/tags/$TAG")
+          status=$(curl -s -o /tmp/release.json -w "%{http_code}" -H "Authorization: token $API_TOKEN" -H "Accept: application/vnd.github.v3+json" "$api_url/releases/tags/$TAG")
 
           if [[ "$status" == "200" ]]; then
             release_id=$(jq -r '.id' /tmp/release.json)
@@ -138,7 +138,7 @@ jobs:
               exit 1
             fi
             echo "Deleting existing unpublished/draft release id=$release_id"
-            curl -s -X DELETE -H "Authorization: token $GITHUB_TOKEN" -H "Accept: application/vnd.github.v3+json" "$api_url/releases/$release_id"
+            curl -s -X DELETE -H "Authorization: token $API_TOKEN" -H "Accept: application/vnd.github.v3+json" "$api_url/releases/$release_id"
           fi
 
           # Ensure tag exists locally; if not, create and push it
@@ -149,13 +149,14 @@ jobs:
             git config user.name "github-actions[bot]"
             git config user.email "github-actions[bot]@users.noreply.github.com"
             git tag -a "$TAG" -m "Release $TAG"
-            git push origin "$TAG"
+            # push using API_TOKEN so the push is authenticated as token owner
+            git push "https://x-access-token:${API_TOKEN}@github.com/${GITHUB_REPOSITORY}.git" "$TAG"
           fi
 
           # Create a new release
           echo "Determining commits since last published release to include in release notes"
           # Get the latest published release from GitHub (if any)
-          latest_resp=$(curl -s -H "Authorization: token $GITHUB_TOKEN" -H "Accept: application/vnd.github.v3+json" "$api_url/releases/latest" || true)
+          latest_resp=$(curl -s -H "Authorization: token $API_TOKEN" -H "Accept: application/vnd.github.v3+json" "$api_url/releases/latest" || true)
           latest_tag=$(echo "$latest_resp" | jq -r .tag_name 2>/dev/null || true)
           # Ensure tags are available locally
           git fetch --tags --prune || true
@@ -170,7 +171,7 @@ jobs:
           fi
 
           if [[ -z "$commits" ]]; then
-            body="Automated release for version $VERSION\n\nNo changes since last published release ($latest_tag)."
+            printf -v body "Automated release for version %s\n\nNo changes since last published release (%s)." "$VERSION" "$latest_tag"
           else
             # Include a header and the commit list
             if [[ -z "$latest_tag" || "$latest_tag" == "null" ]]; then
@@ -178,12 +179,12 @@ jobs:
             else
               header="Changes since $latest_tag:"
             fi
-            body="Automated release for version $VERSION\n\n$header\n$commits"
+            printf -v body "Automated release for version %s\n\n%s\n%s" "$VERSION" "$header" "$commits"
           fi
 
           create_payload=$(jq -n --arg tag "$TAG" --arg name "USDX Lyrics $VERSION" --arg body "$body" '{ tag_name: $tag, name: $name, body: $body, draft: true, prerelease: false }')
           echo "Creating release for $TAG"
-          resp=$(curl -s -H "Authorization: token $GITHUB_TOKEN" -H "Accept: application/vnd.github.v3+json" -d "$create_payload" "$api_url/releases")
+          resp=$(curl -s -H "Authorization: token $API_TOKEN" -H "Accept: application/vnd.github.v3+json" -d "$create_payload" "$api_url/releases")
           upload_url=$(echo "$resp" | jq -r .upload_url | sed -e 's/{?name,label}//')
           if [[ -z "$upload_url" || "$upload_url" == "null" ]]; then
             echo "Failed to create release: $resp" >&2
