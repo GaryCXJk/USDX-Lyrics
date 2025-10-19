@@ -153,7 +153,7 @@ jobs:
           fi
 
           # Create a new release
-          create_payload=$(jq -n --arg tag "$TAG" --arg name "USDX Lyrics $VERSION" --arg body "Automated release for version $VERSION" '{ tag_name: $tag, name: $name, body: $body, draft: false, prerelease: false }')
+          create_payload=$(jq -n --arg tag "$TAG" --arg name "USDX Lyrics $VERSION" --arg body "Automated release for version $VERSION" '{ tag_name: $tag, name: $name, body: $body, draft: true, prerelease: false }')
           echo "Creating release for $TAG"
           resp=$(curl -s -H "Authorization: token $GITHUB_TOKEN" -H "Accept: application/vnd.github.v3+json" -d "$create_payload" "$api_url/releases")
           upload_url=$(echo "$resp" | jq -r .upload_url | sed -e 's/{?name,label}//')
