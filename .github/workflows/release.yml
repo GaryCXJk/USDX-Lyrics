@@ -133,12 +133,18 @@ jobs:
             draft=$(jq -r '.draft' /tmp/release.json)
             published_at=$(jq -r '.published_at' /tmp/release.json)
             echo "Found release id=$release_id draft=$draft published_at=$published_at"
+            # If a published release exists, fail — never overwrite or delete published releases
             if [[ "$draft" == "false" && "$published_at" != "null" ]]; then
               echo "Release for $TAG already published; failing to avoid duplicate published release." >&2
               exit 1
             fi
-            echo "Deleting existing unpublished/draft release id=$release_id"
-            curl -s -X DELETE -H "Authorization: token $API_TOKEN" -H "Accept: application/vnd.github.v3+json" "$api_url/releases/$release_id"
+            # Only delete if the existing release is a draft
+            if [[ "$draft" == "true" ]]; then
+              echo "Deleting existing draft release id=$release_id"
+              curl -s -X DELETE -H "Authorization: token $API_TOKEN" -H "Accept: application/vnd.github.v3+json" "$api_url/releases/$release_id"
+            else
+              echo "Existing release for $TAG is not a draft (draft=$draft published_at=$published_at); not deleting."
+            fi
           fi
 
           # Ensure tag exists locally; if not, create and push it
@@ -192,5 +198,5 @@ jobs:
           fi
 
           echo "Uploading asset $zip_name"
-          curl -s -X POST -H "Authorization: token $GITHUB_TOKEN" -H "Content-Type: application/zip" --data-binary @"$zip_name" "$upload_url?name=$zip_name" \
+          curl -s -X POST -H "Authorization: token $API_TOKEN" -H "Content-Type: application/zip" --data-binary @"$zip_name" "$upload_url?name=$zip_name" \
             | jq -r '.browser_download_url'
