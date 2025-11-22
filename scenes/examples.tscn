@@ -26,4 +26,9 @@ size_flags_vertical = 3
 layout_mode = 2
 text = "Simple"
 
+[node name="SimpleButton2" type="Button" parent="CanvasLayer/MarginContainer/BoxContainer"]
+layout_mode = 2
+text = "Wipe"
+
 [connection signal="pressed" from="CanvasLayer/MarginContainer/BoxContainer/SimpleButton" to="." method="_on_button_pressed" binds= ["simple"]]
+[connection signal="pressed" from="CanvasLayer/MarginContainer/BoxContainer/SimpleButton2" to="." method="_on_button_pressed" binds= ["wipe"]]
